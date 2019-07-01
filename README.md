@@ -1,1 +1,1 @@
-http://registry.jsonresume.org/lindseybieda
+https://registry.jsonresume.org/LindseyB
