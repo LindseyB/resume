@@ -1,727 +1,599 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lindsey Bieda</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,500,600,700|Open+Sans:400,500,600,700' rel='stylesheet' type='text/css'>
-    <style>
-      .clear-margin {
-  margin: 0;
-}
-.space-top {
-  margin-top: 10px;
-}
-.space-right {
-  margin-right: 10px;
-}
-.icon-left {
-  margin-right: 5px;
-}
-.icon-right {
-  margin-left: 5px;
-}
-.labels {
-  word-spacing: 5px;
-  line-height: 2;
-}
-.label-keyword {
-  display: inline-block;
-  background: #7eb0db;
-  color: white;
-  font-size: 0.9em;
-  padding: 5px;
-  border: 1px solid #357ebd;
-}
-.link-disguise {
-  color: inherit;
-}
-.link-disguise:hover {
-  color: inherit;
-}
-@media (max-width: 992px) {
-  .clear-margin-sm {
-    margin-bottom: 0;
-  }
-}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+<title>Lindsey Bieda</title>
+<script src="/cdn-cgi/apps/head/QEWNwoPSl2O5LqMXvi595gsiMPg.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+<style type="text/css">
+	@import url(
+	https://fonts.googleapis.com/css?family=Lato:400,700
+);
 body {
-  font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #f0f0f0;
-  color: #333333;
-  font-size: 16px;
-}
-.text-bolder {
-  font-weight: bold;
-}
-@media only screen {
-  .container {
-    max-width: 50em;
-  }
-}
-@media (max-width: 480px) {
-  ul {
-    padding-left: 25px;
-  }
-  /*
-        .mobile-title {
-            display: inline-block;
-            margin-left: 5px;
-            font-weight: bold;
-            text-transform: uppercase;
-            vertical-align: middle;
-        }
-*/
-  .background-details {
-    display: block;
-  }
-  .background-details .icon {
-    max-width: inherit;
-    min-width: inherit;
-    text-align: left;
-  }
-  .background-details .icon,
-  .background-details .info {
-    display: block;
-    padding: 10px 0;
-  }
-  .background-details .title {
-    display: none;
-  }
-  .card-nested {
-    padding: 5px 0;
-  }
-}
-.profile-card {
-  display: table;
-  width: 100%;
-}
-.profile-pic {
-  display: table-cell;
-  vertical-align: top;
-  padding: 1rem 4rem 0 0 ;
-}
-.profile-pic img {
-  width: 100px;
-  height: 100px;
-}
-.contact-details {
-  display: table-cell;
-}
-.contact-details .detail {
-  display: inline-block;
-  line-height: 2;
-  margin-right: 2rem;
-}
-.contact-details .detail .icon {
-  padding-right: 7px;
-  color: #888;
-}
-.contact-details .detail .info {
-  font-size: 0.8em;
-}
-.social-links {
-  line-height: 2.5;
-}
-.social-link {
-  display: block;
-}
-.social-link span {
-  display: inline-block;
-  vertical-align: middle;
-}
-.social-link:hover,
-.social-link:focus {
-  text-decoration: none;
-}
-.social-link .fa {
-  text-align: center;
-  width: 2em;
-}
-.fa-github {
-  color: #454545;
-}
-.fa-github:hover,
-.fa-github:focus {
-  text-decoration: none;
-  color: #2b2b2b;
-}
-.fa-twitter {
-  color: #33ccff;
-}
-.fa-twitter:hover,
-.fa-twitter:focus {
-  text-decoration: none;
-  color: #00bfff;
-}
-.fa-rss {
-  color: #f36f24;
-}
-.fa-rss:hover,
-.fa-rss:focus {
-  text-decoration: none;
-  color: #d8560c;
-}
-.fa-linkedin {
-  color: #007bb6;
-}
-.fa-linkedin:hover,
-.fa-linkedin:focus {
-  text-decoration: none;
-  color: #005983;
-}
-.fa-skype {
-  color: #12a5f4;
-}
-.fa-skype:hover,
-.fa-skype:focus {
-  text-decoration: none;
-  color: #0986ca;
-}
-.fa-stack-overflow {
-  color: #8e8e92;
-}
-.fa-stack-overflow:hover,
-.fa-stack-overflow:focus {
-  text-decoration: none;
-  color: #747479;
-}
-.fa-soundcloud {
-  color: #e8822d;
-}
-.fa-soundcloud:hover,
-.fa-soundcloud:focus {
-  text-decoration: none;
-  color: #cc6916;
-}
-.fa-pinterest {
-  color: #bd091f;
-}
-.fa-pinterest:hover,
-.fa-pinterest:focus {
-  text-decoration: none;
-  color: #8c0717;
-}
-.fa-vimeo {
-  color: #17b3e8;
-}
-.fa-vimeo:hover,
-.fa-vimeo:focus {
-  text-decoration: none;
-  color: #128fba;
-}
-.fa-behance {
-  color: #2c98cf;
-}
-.fa-behance:hover,
-.fa-behance:focus {
-  text-decoration: none;
-  color: #2379a5;
-}
-.fa-codepen {
-  color: #1c1c1c;
-}
-.fa-codepen:hover,
-.fa-codepen:focus {
-  text-decoration: none;
-  color: #020202;
-}
-.fa-foursquare {
-  color: #fa4778;
-}
-.fa-foursquare:hover,
-.fa-foursquare:focus {
-  text-decoration: none;
-  color: #f91554;
-}
-.fa-reddit {
-  color: #545454;
-}
-.fa-reddit:hover,
-.fa-reddit:focus {
-  text-decoration: none;
-  color: #3b3b3b;
-}
-.fa-spotify {
-  color: #acd200;
-}
-.fa-spotify:hover,
-.fa-spotify:focus {
-  text-decoration: none;
-  color: #829f00;
-}
-.fa-dribbble {
-  color: #ce366f;
-}
-.fa-dribbble:hover,
-.fa-dribbble:focus {
-  text-decoration: none;
-  color: #a82959;
-}
-.fa-facebook {
-  color: #4b6daa;
-}
-.fa-facebook:hover,
-.fa-facebook:focus {
-  text-decoration: none;
-  color: #3b5687;
-}
-.fa-angellist {
-  color: #000000;
-}
-.fa-angellist:hover,
-.fa-angellist:focus {
-  text-decoration: none;
-  color: #000000;
-}
-.fa-bitbucket {
-  color: #205081;
-}
-.fa-bitbucket:hover,
-.fa-bitbucket:focus {
-  text-decoration: none;
-  color: #163758;
-}
-.fa-google-plus {
-  color: #bf2a1d;
-}
-.fa-google-plus:hover,
-.fa-google-plus:focus {
-  text-decoration: none;
-  color: #932016;
-}
-.background-card h4 {
-  font-variant: small-caps;
-  color: #777777;
-  border-bottom: 1px solid #eeeeee;
-  padding-bottom: 1em;
-  margin-bottom: 1em;
-  line-height: 1.2;
-}
-.background-card h4:not(:first-child) {
-  margin-top: 2em;
-}
-h4 > .fa,
-h4 > .title {
-  display: inline-block;
-  vertical-align: baseline;
-}
-h4 > .fa {
-  width: 4rem;
-}
-.content {
-  line-height: 1.5;
-}
-.card {
-  background: #ffffff;
-  border: 1px solid #e6e6e6;
-  border-radius: 3px;
-  padding: 2em 3.5em;
-}
-.card-nested {
-  padding: 1.5rem 0 1.5rem 4.2rem;
-}
-.card-wrapper {
-  padding: 5px;
-}
-.enumeration:not(:last-child):after {
-  content: ", ";
-}
-.enumeration:last-child:after {
-  content: ".";
-}
-@media only screen and (max-width: 768px) {
-  .profile-card {
-    display: block;
-  }
-  .contact-details,
-  .profile-pic {
-    display: block;
-    text-align: center;
-  }
-  .card-nested {
-    padding-left: 0;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .contact-details .detail {
-    display: block;
-  }
-}
-.card-skills {
-  position: relative;
-}
-.skill-info {
-  margin-left: 20px;
-}
-@media only screen and (min-width: 768px) {
-  .skill {
-    border-left: 9px solid #555555;
-  }
-  .skill.beginner {
-    height: 50%;
-    border-color: #e74c3c;
-  }
-  .skill.intermediate {
-    height: 70%;
-    border-color: #f1c40f;
-  }
-  .skill.advanced {
-    border-color: #5cb85c;
-  }
-  .skill.master {
-    border-color: black;
-  }
+	background: #fff;
+	font-family: Lato, sans-serif;
+	margin: 0 0 80px;
+}
+a {
+	color: #2ecc71;
+}
+a:focus,
+a:hover {
+	color: #f1c40f;
+	text-decoration: none;
+}
+p {
+	line-height: 1.5;
+	margin: 0;
+}
+p + p {
+	margin-top: 10px;
+}
+h1,
+h2,
+h3,
+h4 {
+	margin-top: 0
+}
+section {
+	margin-top: 30px;
+}
+li {
+	line-height: 1.8;
+	list-style: none;
+}
+li:before {
+	content: "\f052";
+	float: left;
+	font: 13px Octicons;
+	margin-top: 6px;
+	margin-left: -20px;
+	opacity: .1;
+	position: absolute;
+}
+blockquote {
+	border-left: 5px solid #e7e9ec;
+	font-size: 14px;
+}
+em {
+	color: #95a5a6;
+	font-weight: normal;
+	font-style: normal;
+}
+h4 span:first-child {
+	color: #000;
+	font-weight: bold;
+}
+.container {
+	max-width: 750px;
+	padding: 0 30px;
+}
+.col-sm-6 {
+	margin-bottom: 10px;
+}
+.col-sm-12 h4 {
+	margin-top: 12px; 
+}
+.col-sm-12 + .col-sm-12 {
+	margin-top: 30px;
+}
+#header {
+	background: #f4f6f6;
+	padding: 50px 0;
+	margin-bottom: 30px;
+}
+#header h2 {
+	color: #95a5a6;
+	font-size: 24px;
+}
+#content h3 {
+	color: #f1c40f;
+	font-size: 26px;
+	margin-top: -4px;
+}
+#content aside {
+	text-align: right;
+	padding-right: 30px;
+}
+#profiles .network {
+	text-transform: capitalize;
+}
+#work .position,
+#volunteer .position {
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+#education .area {
+	font-weight: bold;
+}
+#education .area:before {
+	content: "\f0d7";
+	font: 16px Octicons;
+	margin-right: 6px;
+}
+#education .studyType {
+	margin-left: 25px;
+}
+#awards .summary,
+#publications .summary {
+	margin-top: 8px;
+}
+#publications .website a:before {
+	content: attr(href);
+}
+
+@media (min-width: 480px) {
+	.strike-through {
+		border-top: 1px solid #f4f6f6;
+		height: 20px;
+		margin-top: 12px;
+		margin-bottom: -2px;
+		position: relative;
+	}
+	.strike-through span,
+	.strike-through a {
+		background: #fff;
+		position: absolute;
+	}
+	.strike-through span:first-child {
+		padding-right: 20px;
+		margin-top: -12px;
+	}
+	.strike-through span + span {
+		font-size: 14px;
+		margin-top: -10px;
+		padding-left: 20px;
+		right: 0;
+	}
 }
 @media (max-width: 768px) {
-  .quote {
-    font-size: inherit;
-  }
+	.col-sm-6:last-child {
+		margin-bottom: 0px;
+	}
+	#content aside {
+		margin-bottom: 20px;
+		padding-right: 0;
+		text-align: left;
+	}
+	#publications .website a:before {
+		content: "View publication";
+	}
 }
-@media print {
-  body {
-    font-size: 10pt;
-  }
-  a[href]:after {
-    content: none !important;
-  }
-  .pagebreak {
-    page-break-before: always;
-  }
-  .background-card h4:not(:first-child) {
-    margin-top: 0 !important;
-  }
-  .card {
-    border: 0;
-    padding: 0;
-  }
-  .container {
-    max-width: 100%;
-    width: 100%;
-  }
-  .contact-details .detail .icon {
-    color: #888 !important;
-  }
-  .background-card h4 {
-    padding-bottom: 0.5em;
-    margin-bottom: 0.5em;
-    margin-top: 1em !important;
-  }
-  h4 > .fa {
-    display: none !important;
-  }
-  .card-nested {
-    padding: .5rem 0 .5rem 0;
-  }
-  .labels {
-    display: inline;
-  }
-  .skill-info {
-    margin-left: 0;
-  }
-  blockquote {
-    font-size: 100%;
-  }
+@media (max-width: 480px) {
+	h1 {
+		font-size: 26px;
+	}
+	.date {
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+	.strike-through span:first-child {
+		margin-bottom: 7px;
+	}
+	.strike-through span {
+		display: block;
+	}	
+	#header {
+		margin-bottom: 10px;
+		padding: 40px 0;
+	}
+	#actions {
+		display: none;
+	}
 }
 
-    </style>
-  </head>
-
-  <body itemscope itemtype="http://schema.org/Person">
-    
-    <div class="container">
-      <section class="row">
-        <div class="card-wrapper">
-          <div class="card">
-            <div class="profile-card">
-                <div class="profile-pic">
-                  <img class="media-object img-circle center-block"  data-src="holder.js/100x100"
-                    alt="Lindsey Bieda" src="//www.gravatar.com/avatar/da7b53b12f62462df65152a1a7384a34?s=100&amp;r=pg&amp;d=mm" itemprop="image">
-                </div>
-                <div class="contact-details">
-                  <div class="name-and-profession">
-                    <h3 class="text-bolder name" itemprop="name"> Lindsey Bieda</h3>
-                    <h5 class="text-muted" itemprop="jobTitle">Software Engineer</h5>
-                  </div>
-
-                    <div class="detail">
-                      <span class="icon">
-                        <i class="fa fa-lg fa-envelope"></i>
-                      </span>
-
-                      <span class="info">
-                        <a href="/cdn-cgi/l/email-protection#0e626c676b6a6f4e69636f6762206d6163" class="link-disguise" itemprop="email"><span class="__cf_email__" data-cfemail="d1bdb3b8b4b5b091b6bcb0b8bdffb2bebc">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a>
-                      </span>
-                    </div>
-
-                    <div class="detail">
-                      <span class="icon">
-                        <i class="fa fa-lg fa-phone"></i>
-                      </span>
-
-                      <a href="tel://(215) - 200 - 4576" class="link-disguise info" itemprop="telephone">
-                        (215) - 200 - 4576
-                      </a>
-                    </div>
-
-                    <div class="detail">
-                      <span class="icon">
-                        <i class="fa fa-lg fa-map-marker"></i>
-                      </span>
-
-                        <span class="info">
-                          Pittsburgh, PA,
-                          US
-                        </span>
-                    </div>
-
-                </div>
-                
-            </div>
-            <hr>
-
-            <div class="social-links">
-                <a class="social-link" href="http://twitter.com/lindseybieda" target="_blank">
-                  <span class="fa fa-twitter fa-2x"></span> 
-                  <span class="social-link-text">http://twitter.com/lindseybieda</span>
-                </a>
-                <a class="social-link" href="http://github.com/LindseyB" target="_blank">
-                  <span class="fa fa-github fa-2x"></span> 
-                  <span class="social-link-text">http://github.com/LindseyB</span>
-                </a>
-                <a class="social-link" href="https://lindseybieda.itch.io/" target="_blank">
-                  <span class="fa fa-itch.io fa-2x"></span> 
-                  <span class="social-link-text">https://lindseybieda.itch.io/</span>
-                </a>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section class="row">
-        <div class="card-wrapper">
-          <div class="card background-card">
-
-            <h4 id="about"> <span class="fa fa-lg fa-user"></span> <span class="title">About</span> </h4>
-            <div class="card-nested" itemprop="description">
-              <p> Lindsey is a passionate software engineer who loves writing code and finding ways to use her creative side while programming.  </p>
-            </div>
-
-            <h4 id="work-experience"> <span class="fa fa-lg fa-pencil-square-o"></span> <span class="title">Work Experience</span> </h4>
-            <ul class="list-unstyled">
-                <li class="card-nested">
-                  <div class="content has-sidebar">
-                    <p class="clear-margin-sm">
-                      <strong>Software Engineer</strong>,
-                      <a href="https://articulate.com" target="_blank">Articulate Global</a>
-                    </p>
-                    <p class="text-muted">
-                      <small>
-                        <span class="space-right"> Jul 2013 -  Jun 2016  </span>
-                         <span> <i class="fa fa-clock-o icon-left"></i> 2 years 11 months </span> 
-                      </small>
-                    </p>
-                    <p>Articulate focuses on the world of e-learning with a variety of products to help support e-learning environments</p>
-                      <ul>
-                          <li> Built and launched the largest community website for e-learning professionals </li>
-                          <li> Designed and integrated single sign on for all Articulate products </li>
-                      </ul>
-                  </div>
-
-                </li>
-                <li class="card-nested">
-                  <div class="content has-sidebar">
-                    <p class="clear-margin-sm">
-                      <strong>Software Engineer R&amp;D</strong>,
-                      <a href="http://www.brandingbrand.com/" target="_blank">Branding Brand</a>
-                    </p>
-                    <p class="text-muted">
-                      <small>
-                        <span class="space-right"> Jun 2012 -  Apr 2013  </span>
-                         <span> <i class="fa fa-clock-o icon-left"></i> 9 months </span> 
-                      </small>
-                    </p>
-                    <p>Branding Brand is a company that focuses on facilitating mobile e-commerce for it&#x27;s business partners</p>
-                      <ul>
-                          <li> Built a third party shopping API so purchases could easily happen through partner websites </li>
-                          <li> Developed tools to assist in &quot;transcoding&quot; partner websites for mobile consumption </li>
-                      </ul>
-                  </div>
-
-                </li>
-                <li class="card-nested">
-                  <div class="content has-sidebar">
-                    <p class="clear-margin-sm">
-                      <strong>Software Engineer</strong>,
-                      <a href="http://www.deeplocal.com/" target="_blank">Deeplocal</a>
-                    </p>
-                    <p class="text-muted">
-                      <small>
-                        <span class="space-right"> Jan 2010 -  Aug 2010  </span>
-                         <span> <i class="fa fa-clock-o icon-left"></i> 6 months </span> 
-                      </small>
-                    </p>
-                    <p>Deeplocal is a technology company that builds innovative tech for advertising</p>
-                      <ul>
-                          <li> Wrote a script to automatically update public transit data </li>
-                          <li> Completed and tweaked an iPhone game for self parking cars </li>
-                          <li> Released a motherhood community website </li>
-                      </ul>
-                  </div>
-
-                </li>
-                <li class="card-nested">
-                  <div class="content has-sidebar">
-                    <p class="clear-margin-sm">
-                      <strong>Instructor</strong>,
-                      <a href="http://tli.cs.pitt.edu/" target="_blank">Technology Leadership Initiative</a>
-                    </p>
-                    <p class="text-muted">
-                      <small>
-                        <span class="space-right"> Jun 2009 -  Aug 2009  </span>
-                         <span> <i class="fa fa-clock-o icon-left"></i> 2 months </span> 
-                      </small>
-                    </p>
-                    <p>TLI is a group that focuses on bringing computer science education to students that do not have access to programming classes in school</p>
-                      <ul>
-                          <li> Wrote lesson plans for JavaScript, Robotics, and Computational Thinking classes </li>
-                          <li> Co-taught classes for 13-15 year old students </li>
-                      </ul>
-                  </div>
-
-                </li>
-            </ul>
-
-            <h4 id="skills"> <span class="fa fa-lg fa-code"></span> <span class="title">Skills</span> </h4>
-            <ul class="list-unstyled">
-                <li class="card-nested skill master">
-                  <strong>Web Development (master):</strong> 
-                   <span class="enumeration">HTML</span>  <span class="enumeration">CSS</span>  <span class="enumeration">Javascript</span>  <span class="enumeration">Ruby on Rails</span> 
-              </li>
-                <li class="card-nested skill master">
-                  <strong>Programming (master):</strong> 
-                   <span class="enumeration">Lua</span>  <span class="enumeration">Python</span>  <span class="enumeration">D</span>  <span class="enumeration">C/C++</span>  <span class="enumeration">C#</span> 
-              </li>
-                <li class="card-nested skill master">
-                  <strong>Databases (master):</strong> 
-                   <span class="enumeration">SQL</span>  <span class="enumeration">PostgreSQL</span>  <span class="enumeration">MySQL</span>  <span class="enumeration">Redis</span> 
-              </li>
-            </ul>
-  
-            <h4 id="education"><span class="fa fa-lg fa-mortar-board"></span> <span class="title">Education</span></h4>
-            
-            <ul class="list-unstyled">
-                <li class="card-nested">
-                  <div class="content has-sidebar">
-                    <p class="clear-margin-sm">
-                      <strong>Computer Science, Bachelor</strong>,&nbsp;
-                      University of Pittsburgh
-                    </p>
-                    <p class="text-muted">
-                      <small>
-                        Aug 2005 -  Dec 2008 
-                      </small>
-                    </p>
-                    <i></i>
-                    <div class="space-top labels">
-                      
-                    </div>
-                  </div>
-                </li>
-                <li class="card-nested">
-                  <div class="content has-sidebar">
-                    <p class="clear-margin-sm">
-                      <strong>Computer Science, Masters (incomplete)</strong>,&nbsp;
-                      University of Pittsburgh
-                    </p>
-                    <p class="text-muted">
-                      <small>
-                        Aug 2009 -  Apr 2012 
-                      </small>
-                    </p>
-                    <i></i>
-                    <div class="space-top labels">
-                      
-                    </div>
-                  </div>
-                </li>
-            </ul>
-
-
-            <h4 id="volunteer-work"><span class="fa fa-lg fa-child"></span> <span class="title">Volunteer Work</span> </h4>
-            <ul class="list-unstyled">
-                <li class="card-nested">
-                  <div class="content has-sidebar">
-                    <p class="clear-margin-sm">
-                      <strong>Organizer and Teacher</strong>,&nbsp;
-                      Girl Develop It
-                    </p>
-                    <p class="text-muted">
-                      <small>
-                        Jan 2012 -  Jan 2013 
-                      </small>
-                    </p>
-                    <p>A non-profit organization to help provide affordable tech instruction to women</p>
-                    <ul>
-                        <li> Started the Pittsburgh branch of GDI </li>
-                        <li> Wrote additional course materials </li>
-                        <li> Organized events and taught classes </li>
-                    </ul>
-                  </div>
-                </li>
-            </ul>
-
-
-            <h4 id="interests"> <span class="fa fa-lg fa-heart"></span> <span class="title">Interests</span> </h4>
-            <ul class="list-unstyled">
-                <li class="card-nested">
-                  <p>
-                    <strong>Tech</strong>
-                  </p>
-
-                  <div class="space-top labels">
-                      <span class="label label-keyword">Game Programming</span>
-                      <span class="label label-keyword">Hardware</span>
-                  </div>
-                </li>
-                <li class="card-nested">
-                  <p>
-                    <strong>Art</strong>
-                  </p>
-
-                  <div class="space-top labels">
-                      <span class="label label-keyword">Painting</span>
-                      <span class="label label-keyword">Stenciling</span>
-                  </div>
-                </li>
-            </ul>
-
-            <h4 id="references"><span class="fa fa-lg fa-thumbs-up"></span> <span class="title">References</span> </h4>
-            <ul class="list-unstyled">
-                <li class="card-nested">
-                  <p>
-                    <strong></strong>
-                  </p>
-                  <blockquote class="quote">
-                    <p class="clear-margin">Available upon request</p>
-                  </blockquote>
-                </li>
-            </ul>
-
-            <h4 id="languages"><span class="fa fa-lg fa-language"></span> <span class="title">Languages</span> </h4>
-            <p class="card-nested">
-                <span class="enumeration">
-                  <strong>English</strong> (Native speaker)
-                </span>
-            </ul>
-
-          </div>
-        </div>
-      </section>
-    </div>
-    
-  <script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+	</style>
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div class="row">
+<div class="col-sm-9 col-sm-push-3">
+<h1>
+Lindsey Bieda
+</h1>
+<h2>
+Software Engineer
+</h2>
+</div>
+</div>
+</div>
+</header>
+<div id="content" class="container">
+<section id="contact" class="row">
+<aside class="col-sm-3">
+<h3>Contact</h3>
+</aside>
+<div class="col-sm-9">
+<div class="row">
+<div class="col-sm-6">
+<strong>Email</strong>
+<div class="email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d3bfb1bab6b7b293b4beb2babffdb0bcbe">[email&#160;protected]</a></div>
+</div>
+<div class="col-sm-6">
+<strong>Phone</strong>
+<div class="phone">(215) - 200 - 4576</div>
+</div>
+<div class="col-sm-6">
+<strong>Website</strong>
+<div class="website">
+<a href="https://rarlindseysmash,com">https://rarlindseysmash,com</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="about" class="row">
+<aside class="col-sm-3">
+<h3>About</h3>
+</aside>
+<div class="col-sm-9">
+<p>Lindsey is a passionate software engineer who loves writing code and finding ways to use her creative side while programming. </p>
+</div>
+</section>
+<section id="profiles" class="row">
+<aside class="col-sm-3">
+<h3>Profiles</h3>
+</aside>
+<div class="col-sm-9">
+<div class="row">
+<div class="col-sm-6">
+<strong class="network">
+Twitter
+</strong>
+<div class="username">
+<div class="url">
+<a href="http://twitter.com/lindseybieda">lindseybieda</a>
+</div>
+</div>
+</div>
+<div class="col-sm-6">
+<strong class="network">
+GitHub
+</strong>
+<div class="username">
+<div class="url">
+<a href="http://github.com/LindseyB">LindseyB</a>
+</div>
+</div>
+</div>
+<div class="col-sm-6">
+<strong class="network">
+itch.io
+</strong>
+<div class="username">
+<div class="url">
+<a href="https://lindseybieda.itch.io/">lindseybieda</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="work" class="row">
+<aside class="col-sm-3">
+<h3>Work</h3>
+</aside>
+<div class="col-sm-9">
+<div class="row">
+<div class="col-sm-12">
+<h4 class="strike-through">
+<span>GitHub</span>
+<span class="date">
+2016-12-05 —
+</span>
+</h4>
+<div class="website pull-right">
+<a href="https://github.com">https://github.com</a>
+</div>
+<div class="position">
+Senior Application Engineer
+</div>
+<div class="summary">
+<p>GitHub focuses on tools to build software and connnect people in the world of open source</p>
+</div>
+<h4>Highlights</h4>
+<ul class="highlights">
+<li class="bullet">Worked with the Community &amp; Safety team to close abuse vectors in our existing codebase to make our users safer</li>
+<li class="bullet">Added edit history to PRs, Issues, and comments so users could see what changed, when, and by whom</li>
+<li class="bullet">Worked with other teams to determine what abuse vectors would be in their new features and how to best close them</li>
+</ul>
+</div>
+<div class="col-sm-12">
+<h4 class="strike-through">
+<span>Articulate Global</span>
+<span class="date">
+2013-07-01 — 2016-11-01
+</span>
+</h4>
+<div class="website pull-right">
+<a href="https://articulate.com">https://articulate.com</a>
+</div>
+<div class="position">
+Software Engineer
+</div>
+<div class="summary">
+<p>Articulate focuses on the world of e-learning with a variety of products to help support e-learning environments</p>
+</div>
+<h4>Highlights</h4>
+<ul class="highlights">
+<li class="bullet">Built and launched the largest community website for e-learning professionals</li>
+<li class="bullet">Designed and integrated single sign on for all Articulate products</li>
+</ul>
+</div>
+<div class="col-sm-12">
+<h4 class="strike-through">
+<span>Branding Brand</span>
+<span class="date">
+2012-06-01 — 2013-04-01
+</span>
+</h4>
+<div class="website pull-right">
+<a href="http://www.brandingbrand.com/">http://www.brandingbrand.com/</a>
+</div>
+<div class="position">
+Software Engineer R&amp;D
+</div>
+<div class="summary">
+<p>Branding Brand is a company that focuses on facilitating mobile e-commerce for it&#x27;s business partners</p>
+</div>
+<h4>Highlights</h4>
+<ul class="highlights">
+<li class="bullet">Built a third party shopping API so purchases could easily happen through partner websites</li>
+<li class="bullet">Developed tools to assist in &quot;transcoding&quot; partner websites for mobile consumption</li>
+</ul>
+</div>
+<div class="col-sm-12">
+<h4 class="strike-through">
+<span>Deeplocal</span>
+<span class="date">
+2010-01-01 — 2010-08-01
+</span>
+</h4>
+<div class="website pull-right">
+<a href="http://www.deeplocal.com/">http://www.deeplocal.com/</a>
+</div>
+<div class="position">
+Software Engineer
+</div>
+<div class="summary">
+<p>Deeplocal is a technology company that builds innovative tech for advertising</p>
+</div>
+<h4>Highlights</h4>
+<ul class="highlights">
+<li class="bullet">Wrote a script to automatically update public transit data</li>
+<li class="bullet">Completed and tweaked an iPhone game for self parking cars</li>
+<li class="bullet">Released a motherhood community website</li>
+</ul>
+</div>
+<div class="col-sm-12">
+<h4 class="strike-through">
+<span>Technology Leadership Initiative</span>
+<span class="date">
+2009-06-01 — 2009-08-01
+</span>
+</h4>
+<div class="website pull-right">
+<a href="http://tli.cs.pitt.edu/">http://tli.cs.pitt.edu/</a>
+</div>
+<div class="position">
+Instructor
+</div>
+<div class="summary">
+<p>TLI is a group that focuses on bringing computer science education to students that do not have access to programming classes in school</p>
+</div>
+<h4>Highlights</h4>
+<ul class="highlights">
+<li class="bullet">Wrote lesson plans for JavaScript, Robotics, and Computational Thinking classes</li>
+<li class="bullet">Co-taught classes for 13-15 year old students</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="volunteer" class="row">
+<aside class="col-sm-3">
+<h3>Volunteer</h3>
+</aside>
+<div class="col-sm-9">
+<div class="row">
+<div class="col-sm-12">
+<h4 class="strike-through">
+<span>Girl Develop It</span>
+<span class="date">
+2012-01-01 — 2013-01-01
+</span>
+</h4>
+<div class="website pull-right">
+<a href="https://www.girldevelopit.com/">https://www.girldevelopit.com/</a>
+</div>
+<div class="position">
+Organizer and Teacher
+</div>
+<div class="summary">
+<p>A non-profit organization to help provide affordable tech instruction to women</p>
+</div>
+<h4>Highlights</h4>
+<ul class="highlights">
+<li class="bullet">Started the Pittsburgh branch of GDI</li>
+<li class="bullet">Wrote additional course materials</li>
+<li class="bullet">Organized events and taught classes</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="education" class="row">
+<aside class="col-sm-3">
+<h3>Education</h3>
+</aside>
+<div class="col-sm-9">
+<div class="row">
+<div class="col-sm-12">
+<h4 class="strike-through">
+<span>University of Pittsburgh</span>
+<span class="date">
+2005-08-01 — 2008-12-01
+</span>
+</h4>
+<div class="area">
+Computer Science
+</div>
+<div class="studyType">
+Bachelor
+</div>
+</div>
+<div class="col-sm-12">
+<h4 class="strike-through">
+<span>University of Pittsburgh</span>
+<span class="date">
+2009-08-01 — 2012-04-01
+</span>
+</h4>
+<div class="area">
+Computer Science
+</div>
+<div class="studyType">
+Masters (incomplete)
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="publications" class="row">
+<aside class="col-sm-3">
+<h3>Publications</h3>
+</aside>
+<div class="col-sm-9">
+<div class="row">
+<div class="col-sm-12">
+<h4 class="strike-through">
+<span>Artful Games</span>
+<span class="date">
+2016-03-1
+</span>
+</h4>
+<div class="website pull-right">
+<a href="https://recompilermag.com"></a>
+</div>
+<div class="publisher">
+<em>Published by</em>
+<strong>The Recompiler</strong>
+</div>
+<div class="summary">
+<p>Examining a different way to think about video games from the perspective of my own projects</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="skills" class="row">
+<aside class="col-sm-3">
+<h3>Skills</h3>
+</aside>
+<div class="col-sm-9">
+<div class="row">
+<div class="col-sm-6">
+<div class="name">
+<h4>Web Development</h4>
+</div>
+<ul class="keywords">
+<li>HTML</li>
+<li>CSS</li>
+<li>Javascript</li>
+<li>Ruby on Rails</li>
+<li>GraphQL</li>
+</ul>
+</div>
+<div class="col-sm-6">
+<div class="name">
+<h4>Programming</h4>
+</div>
+<ul class="keywords">
+<li>Lua</li>
+<li>Python</li>
+<li>D</li>
+<li>C/C++</li>
+<li>C#</li>
+</ul>
+</div>
+<div class="col-sm-6">
+<div class="name">
+<h4>Databases</h4>
+</div>
+<ul class="keywords">
+<li>SQL</li>
+<li>PostgreSQL</li>
+<li>MySQL</li>
+<li>Redis</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="languages" class="row">
+<aside class="col-sm-3">
+<h3>Languages</h3>
+</aside>
+<div class="col-sm-9">
+<div class="row">
+<div class="col-sm-6">
+<div class="language">
+<strong>English</strong>
+</div>
+<div class="fluency">
+Native speaker
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="interests" class="row">
+<aside class="col-sm-3">
+<h3>Interests</h3>
+</aside>
+<div class="col-sm-9">
+<div class="row">
+<div class="col-sm-6">
+<div class="name">
+<h4>Tech</h4>
+</div>
+<ul class="keywords">
+<li>Game Programming</li>
+<li>Hardware</li>
+</ul>
+</div>
+<div class="col-sm-6">
+<div class="name">
+<h4>Art</h4>
+</div>
+<ul class="keywords">
+<li>Painting</li>
+<li>Stenciling</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="references" class="row">
+<aside class="col-sm-3">
+<h3>References</h3>
+</aside>
+<div class="col-sm-9">
+<div class="row">
+<div class="col-sm-12">
+<blockquote class="reference">
+<p>Available upon request</p>
+<p class="name">
+<strong>— </strong>
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 </html>
+
