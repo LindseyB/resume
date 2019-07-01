@@ -8,8 +8,8 @@
     "website": "https://rarlindseysmash,com",
     "summary": "Lindsey is a passionate software engineer who loves writing code and finding ways to use her creative side while programming. ",
     "location": {
-      "address": "401 Shady Ave Apt A504",
-      "postalCode": "15206",
+      "address": "3925 Butler St Apt A-402",
+      "postalCode": "15201",
       "city": "Pittsburgh",
       "countryCode": "US",
       "region": "PA"
@@ -34,11 +34,23 @@
   },
   "work": [
     {
+      "company": "GitHub",
+      "position": "Senior Application Engineer",
+      "website": "https://github.com",
+      "startDate": "2016-12-05",
+      "summary": "GitHub focuses on tools to build software and connnect people in the world of open source",
+      "highlights": [
+        "Worked with the Community & Safety team to close abuse vectors in our existing codebase to make our users safer",
+        "Added edit history to PRs, Issues, and comments so users could see what changed, when, and by whom",
+        "Worked with other teams to determine what abuse vectors would be in their new features and how to best close them"
+      ]
+    },
+    {
       "company": "Articulate Global",
       "position": "Software Engineer",
       "website": "https://articulate.com",
       "startDate": "2013-07-01",
-      "endDate": "2016-06-01",
+      "endDate": "2016-11-01",
       "summary": "Articulate focuses on the world of e-learning with a variety of products to help support e-learning environments",
       "highlights": [
         "Built and launched the largest community website for e-learning professionals",
@@ -119,7 +131,15 @@
     }
   ],
   "awards": [],
-  "publications": [],
+  "publications": [
+    {
+      "name": "Artful Games",
+      "publisher": "The Recompiler",
+      "releaseDate": "2016-03-1",
+      "website": "https://recompilermag.com",
+      "summary": "Examining a different way to think about video games from the perspective of my own projects"
+    }
+  ],
   "skills": [
     {
       "name": "Web Development",
@@ -128,7 +148,8 @@
         "HTML",
         "CSS",
         "Javascript",
-        "Ruby on Rails"
+        "Ruby on Rails",
+        "GraphQL"
       ]
     },
     {
