@@ -10,17 +10,34 @@
 	@import url(
 	https://fonts.googleapis.com/css?family=Lato:400,700
 );
+
+:root {
+	--headerBackgroundColor: #1E1E1E;
+	--accentColor: #FB0;
+}
+
 body {
 	background: #fff;
 	font-family: Lato, sans-serif;
 	margin: 0 0 80px;
 }
 a {
-	color: #2ecc71;
+	background:
+		linear-gradient(
+			to bottom, var(--accentColor) 0%,
+			var(--accentColor) 100%
+		);
+	background-position: 0 100%;
+	background-repeat: repeat-x;
+	background-size: 4px 2px;
+color: #000;
+text-decoration: none;
+transition: background-size .5s;
 }
-a:focus,
+
 a:hover {
-	color: #f1c40f;
+	background-size: 4px 50px;
+	color: #000;
 	text-decoration: none;
 }
 p {
@@ -79,16 +96,18 @@ h4 span:first-child {
 	margin-top: 30px;
 }
 #header {
-	background: #f4f6f6;
+	color: #fff;
+	background: var(--headerBackgroundColor);
 	padding: 50px 0;
 	margin-bottom: 30px;
 }
 #header h2 {
-	color: #95a5a6;
+	color: var(--accentColor);
 	font-size: 24px;
 }
 #content h3 {
-	color: #f1c40f;
+	/* color: var(--accentColor); */
+	color: black;
 	font-size: 26px;
 	margin-top: -4px;
 }
@@ -209,11 +228,7 @@ Software Engineer
 <div class="row">
 <div class="col-sm-6">
 <strong>Email</strong>
-<div class="email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d3bfb1bab6b7b293b4beb2babffdb0bcbe">[email&#160;protected]</a></div>
-</div>
-<div class="col-sm-6">
-<strong>Phone</strong>
-<div class="phone">Available Upon Request</div>
+<div class="email"><a href="/cdn-cgi/l/email-protection#b3dfd1dad6d7d2f3d4ded2dadf9dd0dcde"><span class="__cf_email__" data-cfemail="2f434d464a4b4e6f48424e4643014c4042">[email&#160;protected]</span></a></div>
 </div>
 <div class="col-sm-6">
 <strong>Website</strong>
@@ -244,7 +259,7 @@ Twitter
 </strong>
 <div class="username">
 <div class="url">
-<a href="http://twitter.com/lindseybieda">lindseybieda</a>
+<a href="https://twitter.com/lindseybieda">lindseybieda</a>
 </div>
 </div>
 </div>
@@ -254,7 +269,7 @@ GitHub
 </strong>
 <div class="username">
 <div class="url">
-<a href="http://github.com/LindseyB">LindseyB</a>
+<a href="https://github.com/LindseyB">LindseyB</a>
 </div>
 </div>
 </div>
@@ -281,7 +296,7 @@ itch.io
 <h4 class="strike-through">
 <span>GitHub</span>
 <span class="date">
-2016-12-05 —
+Dec 2016 — Sep 2019
 </span>
 </h4>
 <div class="website pull-right">
@@ -304,7 +319,7 @@ Senior Application Engineer
 <h4 class="strike-through">
 <span>Articulate Global</span>
 <span class="date">
-2013-07-01 — 2016-11-01
+Jul 2013 — Nov 2016
 </span>
 </h4>
 <div class="website pull-right">
@@ -326,7 +341,7 @@ Software Engineer
 <h4 class="strike-through">
 <span>Branding Brand</span>
 <span class="date">
-2012-06-01 — 2013-04-01
+Jun 2012 — Apr 2013
 </span>
 </h4>
 <div class="website pull-right">
@@ -340,7 +355,7 @@ Software Engineer R&amp;D
 </div>
 <h4>Highlights</h4>
 <ul class="highlights">
-<li class="bullet">Built a third party shopping API so purchases could easily happen through partner websites</li>
+ <li class="bullet">Built a third party shopping API so purchases could easily happen through partner websites</li>
 <li class="bullet">Developed tools to assist in &quot;transcoding&quot; partner websites for mobile consumption</li>
 </ul>
 </div>
@@ -348,7 +363,7 @@ Software Engineer R&amp;D
 <h4 class="strike-through">
 <span>Deeplocal</span>
 <span class="date">
-2010-01-01 — 2010-08-01
+Jan 2010 — Aug 2010
 </span>
 </h4>
 <div class="website pull-right">
@@ -371,7 +386,7 @@ Software Engineer
 <h4 class="strike-through">
 <span>Technology Leadership Initiative</span>
 <span class="date">
-2009-06-01 — 2009-08-01
+Jun 2009 — Aug 2009
 </span>
 </h4>
 <div class="website pull-right">
@@ -564,7 +579,7 @@ Native speaker
 <li>Hardware</li>
 </ul>
 </div>
-<div class="col-sm-6">
+ <div class="col-sm-6">
 <div class="name">
 <h4>Art</h4>
 </div>
@@ -596,4 +611,3 @@ Native speaker
 </div>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 </html>
-
