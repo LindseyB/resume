@@ -1,1 +1,1 @@
-https://registry.jsonresume.org/LindseyB
+https://lindseyb.github.io/resume/
