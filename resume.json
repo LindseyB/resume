@@ -30,6 +30,17 @@
   },
   "work": [
     {
+      "company": "Stitch Fix",
+      "position": "Lead Engineer",
+      "website": "https://stitchfix.com",
+      "startDate": "2020-03-09",
+      "summary": "",
+      "highlights": [
+        "Worked on a collboration shopping experience with an influencer",
+        "Worked on a dynamic shopping experience for clients"
+      ]
+    },
+    {
       "company": "GitHub",
       "position": "Senior Application Engineer",
       "website": "https://github.com",
