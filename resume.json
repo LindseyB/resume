@@ -34,10 +34,12 @@
       "position": "Lead Engineer",
       "website": "https://stitchfix.com",
       "startDate": "2020-03-09",
-      "summary": "",
+      "endDate": "2021-04-02",
+      "summary": "Stitch Fix focuses on providing a personal style service to a variety of customers",
       "highlights": [
-        "Worked on a collboration shopping experience with an influencer",
-        "Worked on a dynamic shopping experience for clients"
+        "Worked on a collaboration shopping experience with an influencer",
+        "Worked on a dynamic shopping experience for clients",
+        "Expanded the direct purchase platform"
       ]
     },
     {
@@ -46,7 +48,7 @@
       "website": "https://github.com",
       "startDate": "2016-12-05",
       "endDate": "2020-02-14",
-      "summary": "GitHub focuses on tools to build software and connnect people in the world of open source",
+      "summary": "GitHub focuses on tools to build software and connect people in the world of open source",
       "highlights": [
         "Worked with the Community & Safety team to close abuse vectors in our existing codebase to make our users safer",
         "Added edit history to PRs, Issues, and comments so users could see what changed, when, and by whom",
