@@ -1,107 +1,154 @@
-\documentclass[10pt]{article}
-    \usepackage[english]{babel}
-    \input{config/minimal-resume-config}
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
+\documentclass[]{awesome-cv}
+\usepackage{textcomp}
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
+
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
+
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
+\colorlet{awesome}{awesome-red}
+%\definecolor{awesome}{HTML}{CA63A8}
+%% Colors for text
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
     \begin{document}
     
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Profile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{center}
-	% Personal
-	% -----------------------------------------------------
-	{\fontsize{\sizeone}{\sizeone}\fontspec[Path = fonts/,LetterSpace=15]{Montserrat-Regular} LINDSEY BIEDA}
-	\\
+	\headerfirstnamestyle{Lindsey} \headerlastnamestyle{Bieda} \\
 	\vspace{2mm}
-	{\fontsize{1em}{1em}\fontspec[Path = fonts/]{Montserrat-Light} lbieda@gmail.com -- https://rarlindseysmash.com}
+	{\faEnvelope\ lbieda@gmail.com} | {\faMapMarker\ Pittsburgh, PA} | {\faLink\ https://rarlindseysmash.com}
 \end{center}
-% Chapter: Education
-% ------------------
-
-\chap{EDUCATION}{
-	
-	\school
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Education}
+\begin{cventries}
+	\cventry
+	{Bachelor in Computer Science}
 	{University of Pittsburgh}
+	{}
 	{2005-08-01 – 2008-12-01}
-	{Bachelor Computer Science}
 	{}
-	{
-	}
-	\school
+	\cventry
+	{Masters (incomplete) in Computer Science}
 	{University of Pittsburgh}
+	{}
 	{2009-08-01 – 2012-04-01}
-	{Masters (incomplete) Computer Science}
 	{}
-	{
-	}
-}
-% Chapter: Work Experience
-% ------------------------
-\chap{EXPERIENCE}{
-	
-	\job
-	{Stitch Fix}
-	{2020-03-09 – Present}
+\end{cventries}
+
+\vspace{-2mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Experience}
+\begin{cventries}
+	\cventry
 	{Lead Engineer}
+	{Stitch Fix}
 	{}
-	{\begin{newitemize}
-		\item {Worked on a collboration shopping experience with an influencer}
+	{2020-03-09 – 2021-04-02}
+	{\begin{cvitems}
+		\item {Worked on a collaboration shopping experience with an influencer}
 		\item {Worked on a dynamic shopping experience for clients}
-		\end{newitemize}}
-	\job
-	{GitHub}
-	{2016-12-05 – 2020-02-14}
+		\item {Expanded the direct purchase platform}
+		\end{cvitems}}
+	\cventry
 	{Senior Application Engineer}
+	{GitHub}
 	{}
-	{\begin{newitemize}
+	{2016-12-05 – 2020-02-14}
+	{\begin{cvitems}
 		\item {Worked with the Community \& Safety team to close abuse vectors in our existing codebase to make our users safer}
 		\item {Added edit history to PRs, Issues, and comments so users could see what changed, when, and by whom}
 		\item {Worked with other teams to determine what abuse vectors would be in their new features and how to best close them}
-		\end{newitemize}}
-	\job
-	{Articulate Global}
-	{2013-07-01 – 2016-11-01}
+		\end{cvitems}}
+	\cventry
 	{Software Engineer}
+	{Articulate Global}
 	{}
-	{\begin{newitemize}
+	{2013-07-01 – 2016-11-01}
+	{\begin{cvitems}
 		\item {Built and launched the largest community website for e-learning professionals}
 		\item {Designed and integrated single sign on for all Articulate products}
-		\end{newitemize}}
-	\job
-	{Branding Brand}
-	{2012-06-01 – 2013-04-01}
+		\end{cvitems}}
+	\cventry
 	{Software Engineer R\&D}
+	{Branding Brand}
 	{}
-	{\begin{newitemize}
+	{2012-06-01 – 2013-04-01}
+	{\begin{cvitems}
 		\item {Built a third party shopping API so purchases could easily happen through partner websites}
 		\item {Developed tools to assist in \textquotedbl{}transcoding\textquotedbl{} partner websites for mobile consumption}
-		\end{newitemize}}
-	\job
-	{Deeplocal}
-	{2010-01-01 – 2010-08-01}
+		\end{cvitems}}
+	\cventry
 	{Software Engineer}
+	{Deeplocal}
 	{}
-	{\begin{newitemize}
+	{2010-01-01 – 2010-08-01}
+	{\begin{cvitems}
 		\item {Wrote a script to automatically update public transit data}
 		\item {Completed and tweaked an iPhone game for self parking cars}
 		\item {Released a motherhood community website}
-		\end{newitemize}}
-	\job
-	{Technology Leadership Initiative}
-	{2009-06-01 – 2009-08-01}
+		\end{cvitems}}
+	\cventry
 	{Instructor}
+	{Technology Leadership Initiative}
 	{}
-	{\begin{newitemize}
+	{2009-06-01 – 2009-08-01}
+	{\begin{cvitems}
 		\item {Wrote lesson plans for JavaScript, Robotics, and Computational Thinking classes}
 		\item {Co-taught classes for 13-15 year old students}
-		\end{newitemize}}
-}
-% Chapter: Skills
-% ------------------------
+		\end{cvitems}}
+\end{cventries}
+\cvsection{Skills}
+\begin{cventries}
+	\cventry
+	{}
+	{\def\arraystretch{1.15}{\begin{tabular}{ l l }
+		Web Development:  & {\skill{ HTML, CSS, JavaScript, Ruby on Rails, GraphQL, React}} \\
+		Programming:  & {\skill{ Lua, Python, D, C/C++, C\#, Go}} \\
+		Databases:  & {\skill{ SQL, PostgreSQL, MySQL, Redis}} \\
+		\end{tabular}}}
+	{}
+	{}
+	{}
+\end{cventries}
 
-\chap{SKILLS}{
-	\begin{newitemize}
-		\item Web Development: HTML, CSS, Javascript, Ruby on Rails, GraphQL
-		\item Programming: Lua, Python, D, C/C++, C\#, Go
-		\item Databases: SQL, PostgreSQL, MySQL, Redis
-	\end{newitemize}
-}
+\vspace{-7mm}
 
 
 \ 
