@@ -29,6 +29,16 @@
     ]
   },
   "work": [
+        {
+      "company": "GitHub",
+      "position": "Senior Engineer",
+      "website": "https://github.com",
+      "startDate": "2021-04-20",
+      "summary": "GitHub focuses on tools to build software and connect people in the world of open source",
+      "highlights": [
+        "Worked to expand the discussions feature",
+      ]
+    },
     {
       "company": "Stitch Fix",
       "position": "Lead Engineer",
