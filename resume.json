@@ -30,7 +30,7 @@
   },
   "work": [
         {
-      "company": "GitHub",
+      "name": "GitHub",
       "position": "Senior Engineer",
       "website": "https://github.com",
       "startDate": "2021-04-20",
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "company": "Stitch Fix",
+      "name": "Stitch Fix",
       "position": "Lead Engineer",
       "website": "https://stitchfix.com",
       "startDate": "2020-03-09",
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "company": "GitHub",
+      "name": "GitHub",
       "position": "Senior Application Engineer",
       "website": "https://github.com",
       "startDate": "2016-12-05",
@@ -66,7 +66,7 @@
       ]
     },
     {
-      "company": "Articulate Global",
+      "name": "Articulate Global",
       "position": "Software Engineer",
       "website": "https://articulate.com",
       "startDate": "2013-07-01",
@@ -78,7 +78,7 @@
       ]
     },
     {
-      "company": "Branding Brand",
+      "name": "Branding Brand",
       "position": "Software Engineer R&D",
       "website": "http://www.brandingbrand.com/",
       "startDate": "2012-06-01",
@@ -90,7 +90,7 @@
       ]
     },
     {
-      "company": "Deeplocal",
+      "name": "Deeplocal",
       "position": "Software Engineer",
       "website": "http://www.deeplocal.com/",
       "startDate": "2010-01-01",
