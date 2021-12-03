@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lindsey Bieda</title>
+    <meta name="description" content="Lindsey is a passionate software engineer who loves writing code and finding ways to use her creative side while programming. " />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
+    <style>:root {
+  /* Colors */
+  --primaryColor: #212529;
+  --secondaryColor: #95a5a6;
+  --accentColor: #f1c40f;
+  --linkColor: #2ecc71;
+  --mutedColor: #f4f6f6;
+
+  /* Typography */
+  --ratio: 1.25;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--ratio));
+  --scale2: calc(var(--scale1) * var(--ratio));
+  --scale3: calc(var(--scale2) * var(--ratio));
+  --scale4: calc(var(--scale3) * var(--ratio));
+  --scale5: calc(var(--scale4) * var(--ratio));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  color: var(--primaryColor);
+  display: grid;
+  font: 1em/1.5 Lato, sans-serif;
+  gap: 2em;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [main-start side-start]
+    minmax(min-content, 12em)
+    [side-end content-start]
+    minmax(min-content, 36em)
+    [main-end content-end]
+    1fr
+    [full-end];
+  grid-template-rows: auto [content] 0;
+  margin-bottom: 4em;
+}
+
+body::before {
+  content: '';
+  grid-column: full;
+  grid-row: content;
+}
+
+ol,
+ul {
+  padding-left: 1em;
+}
+
+li + li {
+  margin-top: 0.2em;
+}
+
+li::marker {
+  color: var(--mutedColor);
+}
+
+a {
+  color: var(--linkColor);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:focus,
+a:hover {
+  color: var(--accentColor);
+}
+
+h1,
+h2,
+h3,
+h5 {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--scale5);
+}
+
+h2 {
+  color: var(--secondaryColor);
+  font-size: var(--scale4);
+}
+
+h3 {
+  color: var(--accentColor);
+  font-size: var(--scale3);
+  grid-column: side;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: var(--scale2);
+}
+
+h5 {
+  font-size: var(--scale1);
+}
+
+h6 {
+  font-size: var(--scale0);
+}
+
+blockquote {
+  border-left: 0.2em solid var(--mutedColor);
+  padding-left: 1em;
+}
+
+cite {
+  color: var(--secondaryColor);
+  font-style: inherit;
+}
+
+cite::before {
+  content: '— ';
+}
+
+.masthead {
+  background: var(--mutedColor);
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 4em 0;
+  row-gap: 0;
+}
+
+.masthead > *,
+section {
+  grid-column: main;
+}
+
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
+}
+
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
+
+.grid-list {
+  display: grid;
+  gap: 1em;
+}
+
+.spaced-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spaced-list:first-child::before {
+  border-bottom: 1px solid var(--mutedColor);
+  content: '';
+  flex-grow: 1;
+  margin: 0 1em;
+  order: 1;
+}
+
+.spaced-list > :nth-child(2) {
+  order: 2;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.tag-list > li {
+  background: var(--mutedColor);
+  margin: 0 0.2em 0.2em 0;
+  padding: 0.2em 0.6em;
+}
+
+@media print, (min-width: 48em) {
+  h3 {
+    text-align: right;
+    margin-bottom: inherit;
+  }
+
+  .masthead > *,
+  section {
+    grid-column: content;
+  }
+
+  section {
+    display: contents;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>
+  </head>
+  <body>
+      <header class="masthead">
+          <h1>Lindsey Bieda</h1>
+          <h2>Software Engineer</h2>
+      </header>
+      <section id="contact">
+        <h3>Contact</h3>
+        <div class="grid-list">
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:lbieda@gmail.com">lbieda@gmail.com</a>
+            </div>
+        </div>
+      </section>
+        <section id="about">
+          <h3>About</h3>
+          <article>
+            <p>Lindsey is a passionate software engineer who loves writing code and finding ways to use her creative side while programming.</p>
+          </article>
+        </section>
+        <section id="profiles">
+          <h3>Profiles</h3>
+          <div class="grid-list">
+              <div>
+                  <h4>Twitter</h4>
+                    <a href="http://twitter.com/lindseybieda">lindseybieda</a>
+              </div>
+              <div>
+                  <h4>GitHub</h4>
+                    <a href="http://github.com/LindseyB">LindseyB</a>
+              </div>
+              <div>
+                  <h4>itch.io</h4>
+                    <a href="https://lindseybieda.itch.io/">lindseybieda</a>
+              </div>
+          </div>
+        </section>
+
+      <section id="work">
+        <h3>Work</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2021-04-20">Apr 2021</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Senior Engineer</strong>
+                </div>
+              </header>
+                <p>GitHub focuses on tools to build software and connect people in the world of open source</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Worked to expand the discussions feature</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2020-03-09">Mar 2020</time> –
+                    <time datetime="2021-04-02">Apr 2021</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Lead Engineer</strong>
+                </div>
+              </header>
+                <p>Stitch Fix focuses on providing a personal style service to a variety of customers</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Worked on a collaboration shopping experience with an influencer</li>
+                    <li>Worked on a dynamic shopping experience for clients</li>
+                    <li>Expanded the direct purchase platform</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2016-12-05">Dec 2016</time> –
+                    <time datetime="2020-02-14">Feb 2020</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Senior Application Engineer</strong>
+                </div>
+              </header>
+                <p>GitHub focuses on tools to build software and connect people in the world of open source</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Worked with the Community &amp; Safety team to close abuse vectors in our existing codebase to make our users safer</li>
+                    <li>Added edit history to PRs, Issues, and comments so users could see what changed, when, and by whom</li>
+                    <li>Worked with other teams to determine what abuse vectors would be in their new features and how to best close them</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2013-07-01">Jul 2013</time> –
+                    <time datetime="2016-11-01">Nov 2016</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software Engineer</strong>
+                </div>
+              </header>
+                <p>Articulate focuses on the world of e-learning with a variety of products to help support e-learning environments</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Built and launched the largest community website for e-learning professionals</li>
+                    <li>Designed and integrated single sign on for all Articulate products</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2012-06-01">Jun 2012</time> –
+                    <time datetime="2013-04-01">Apr 2013</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software Engineer R&amp;D</strong>
+                </div>
+              </header>
+                <p>Branding Brand is a company that focuses on facilitating mobile e-commerce for it's business partners</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Built a third party shopping API so purchases could easily happen through partner websites</li>
+                    <li>Developed tools to assist in &quot;transcoding&quot; partner websites for mobile consumption</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2010-01-01">Jan 2010</time> –
+                    <time datetime="2010-08-01">Aug 2010</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software Engineer</strong>
+                </div>
+              </header>
+                <p>Deeplocal is a technology company that builds innovative tech for advertising</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Wrote a script to automatically update public transit data</li>
+                    <li>Completed and tweaked an iPhone game for self parking cars</li>
+                    <li>Released a motherhood community website</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2009-06-01">Jun 2009</time> –
+                    <time datetime="2009-08-01">Aug 2009</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Instructor</strong>
+                </div>
+              </header>
+                <p>TLI is a group that focuses on bringing computer science education to students that do not have access to programming classes in school</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Wrote lesson plans for JavaScript, Robotics, and Computational Thinking classes</li>
+                    <li>Co-taught classes for 13-15 year old students</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="volunteer">
+        <h3>Volunteer</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Girl Develop It</h4>
+                  <span>
+                    <time datetime="2012-01-01">Jan 2012</time> –
+                    <time datetime="2013-01-01">Jan 2013</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Organizer and Teacher</strong>
+                </div>
+              </header>
+                <p>A non-profit organization to help provide affordable tech instruction to women</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Started the Pittsburgh branch of GDI</li>
+                    <li>Wrote additional course materials</li>
+                    <li>Organized events and taught classes</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="education">
+        <h3>Education</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>University of Pittsburgh</h4>
+                  <span>
+                    <time datetime="2005-08-01">Aug 2005</time> –
+                    <time datetime="2008-12-01">Dec 2008</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Computer Science</strong>
+                </div>
+              </header>
+                <p>Bachelor</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>University of Pittsburgh</h4>
+                  <span>
+                    <time datetime="2009-08-01">Aug 2009</time> –
+                    <time datetime="2012-04-01">Apr 2012</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Computer Science</strong>
+                </div>
+              </header>
+                <p>Masters (incomplete)</p>
+            </article>
+        </div>
+      </section>
+      <section id="publications">
+        <h3>Publications</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Artful Games</h4>
+                    <time datetime="2016-03-01">Mar 2016</time>
+                </div>
+                <div class="spaced-list">
+                    <span>
+                      Published by <strong>The Recompiler</strong>
+                    </span>
+                </div>
+              </header>
+                <p>Examining a different way to think about video games from the perspective of my own projects</p>
+            </article>
+        </div>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Web Development</h4>
+                <ul class="tag-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Ruby on Rails</li>
+                    <li>GraphQL</li>
+                    <li>React</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Programming</h4>
+                <ul class="tag-list">
+                    <li>Lua</li>
+                    <li>Python</li>
+                    <li>D</li>
+                    <li>C/C++</li>
+                    <li>C#</li>
+                    <li>Go</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Databases</h4>
+                <ul class="tag-list">
+                    <li>SQL</li>
+                    <li>PostgreSQL</li>
+                    <li>MySQL</li>
+                    <li>Redis</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+      <section id="languages">
+        <h3>Languages</h3>
+        <div class="grid-list">
+            <div>
+                <h4>English</h4>
+              Native speaker
+            </div>
+        </div>
+      </section>
+      <section id="interests">
+        <h3>Interests</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Tech</h4>
+                <ul class="tag-list">
+                    <li>Game Programming</li>
+                    <li>Hardware</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Art</h4>
+                <ul class="tag-list">
+                    <li>Painting</li>
+                    <li>Stenciling</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+      <section id="references">
+        <h3>References</h3>
+        <div class="stack">
+              <blockquote>
+                <p>Available upon request</p>
+                  <p>
+                    <cite></cite>
+                  </p>
+              </blockquote>
+        </div>
+      </section>
+  </body>
+</html>
