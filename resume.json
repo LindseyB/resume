@@ -6,9 +6,9 @@
     "website": "https://rarlindseysmash.com",
     "summary": "Lindsey is a passionate software engineer who loves writing code and finding ways to use her creative side while programming. ",
     "location": {
-      "city": "Pittsburgh",
+      "city": "San Mateo",
       "countryCode": "US",
-      "region": "PA"
+      "region": "CA"
     },
     "profiles": [
       {
@@ -29,14 +29,15 @@
     ]
   },
   "work": [
-        {
+    {
       "name": "GitHub",
-      "position": "Senior Engineer",
+      "position": ["Staff Engineer", "Senior Engineer"],
       "website": "https://github.com",
       "startDate": "2021-04-20",
       "summary": "GitHub focuses on tools to build software and connect people in the world of open source",
       "highlights": [
-        "Worked to expand the discussions feature"
+        "Worked to expand the discussions feature",
+        "Anchored the team for a year acting as lead and point of contact for external teams"
       ]
     },
     {
