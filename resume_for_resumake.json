@@ -30,13 +30,13 @@
   },
   "work": [
     {
-      "name": "GitHub",
+      "company": "GitHub",
       "position": "Staff Engineer",
       "website": "https://github.com",
       "startDate": "2022-09-01"
     },
     {
-      "name": "GitHub",
+      "company": "GitHub",
       "position": "Senior Engineer",
       "website": "https://github.com",
       "startDate": "2021-04-20",
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "name": "Stitch Fix",
+      "company": "Stitch Fix",
       "position": "Lead Engineer",
       "website": "https://stitchfix.com",
       "startDate": "2020-03-09",
@@ -62,7 +62,7 @@
       ]
     },
     {
-      "name": "GitHub",
+      "company": "GitHub",
       "position": "Senior Application Engineer",
       "website": "https://github.com",
       "startDate": "2016-12-05",
@@ -75,7 +75,7 @@
       ]
     },
     {
-      "name": "Articulate Global",
+      "company": "Articulate Global",
       "position": "Software Engineer",
       "website": "https://articulate.com",
       "startDate": "2013-07-01",
@@ -87,7 +87,7 @@
       ]
     },
     {
-      "name": "Branding Brand",
+      "company": "Branding Brand",
       "position": "Software Engineer R&D",
       "website": "http://www.brandingbrand.com/",
       "startDate": "2012-06-01",
@@ -99,7 +99,7 @@
       ]
     },
     {
-      "name": "Deeplocal",
+      "company": "Deeplocal",
       "position": "Software Engineer",
       "website": "http://www.deeplocal.com/",
       "startDate": "2010-01-01",
@@ -112,7 +112,7 @@
       ]
     },
     {
-      "name": "Technology Leadership Initiative",
+      "company": "Technology Leadership Initiative",
       "position": "Instructor",
       "website": "http://tli.cs.pitt.edu/",
       "startDate": "2009-06-01",
