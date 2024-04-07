@@ -31,9 +31,24 @@
   "work": [
     {
       "name": "GitHub",
+      "position": "Staff Engineering Manager",
+      "website": "https://github.com",
+      "startDate": "2024-01-01",
+      "highlights": [
+        "Managed a team of 7 engineers",
+        "Lead the Copilot for PRs team in delivering enterpise features including automatic PR summaries and seamless integration with PR code diffs"
+      ]
+    },
+    {
+      "name": "GitHub",
       "position": "Staff Engineer",
       "website": "https://github.com",
-      "startDate": "2022-09-01"
+      "startDate": "2022-09-01",
+      "endDate": "2024-01-01",
+      "highlights": [
+        "Created the standard for how hackathons were run and operated at GitHub",
+        "Developed a pilot program for engineers to rotates through different teams and defined a standard for how to do so"
+      ]
     },
     {
       "name": "GitHub",
@@ -43,8 +58,9 @@
       "endDate": "2022-09-01",
       "summary": "GitHub focuses on tools to build software and connect people in the world of open source",
       "highlights": [
-        "Worked to expand the discussions feature",
-        "Anchored the team for a year acting as lead and point of contact for external teams",
+        "Operated as the manager for the discussions team for 6 months",
+        "Drove splitting the oversized routes file into separate files and to make the codebase more maintainable",
+        "Anchored the team for a year acting as lead and point of contact for external teams and assuring work was moving forward",
         "Assited in moving GitHub's community to the GitHub Discussions platform"
       ]
     },
