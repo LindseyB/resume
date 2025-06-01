@@ -12,9 +12,9 @@
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "lindseybieda",
-        "url": "http://twitter.com/lindseybieda"
+        "network": "BlueSky",
+        "username": "lindseyb",
+        "url": "https://bsky.app/profile/lindseyb.bsky.social"
       },
       {
         "network": "GitHub",
