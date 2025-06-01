@@ -9,7 +9,8 @@ https://lindseyb.github.io/resume/
 ## Generating new index.html file
 
 ```
-npx resume export index.html
+npm install jsonresume-theme-flat
+npx resume export index.html --theme flat
 ```
 
 add the following to the HTML
