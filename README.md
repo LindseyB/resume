@@ -5,6 +5,8 @@ https://lindseyb.github.io/resume/
 
 👩‍💻
 
+The version that is hosted on json resume can be found over there: https://registry.jsonresume.org/LindseyB
+
 
 ## Generating new index.html file
 
