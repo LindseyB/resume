@@ -256,5 +256,8 @@
       "name": "",
       "reference": "Available upon request"
     }
-  ]
+  ],
+  "meta": {
+    "theme": "flat"
+  }
 }
