@@ -1,154 +1,155 @@
 {
   "basics": {
     "name": "Lindsey Bieda",
-    "label": "Software Engineering Manager",
+    "label": "Staff Engineering Manager",
     "image": "https://avatars.githubusercontent.com/u/33750?v=4",
     "email": "lbieda@gmail.com",
-    "website": "https://rarlindseysmash.com",
-    "summary": "Lindsey is a results-driven software engineering manager with a passion for building inclusive, high-performing teams and fostering positive, collaborative cultures. She combines creative vision with strong analytical skills to deliver innovative solutions and empower teams to achieve ambitious goals. Lindsey is dedicated to mentoring talent, driving continuous improvement, and ensuring both business and team success.",
+    "phone": "(402) 784-1337",
+    "website": "https://lindsey.codes",
+    "summary": "Engineering leader with over a decade of experience building and scaling full-stack products, managing globally distributed teams, and launching AI-integrated systems from the ground up. Combines deep technical proficiency in backend architecture, modern web frameworks, and API design with a people-first approach to mentorship, team development, and cross-functional collaboration.",
+    "tagline": "Building scalable, mission-driven technology solutions that empower teams and deliver real-world impact",
     "location": {
-      "city": "San Mateo",
+      "city": "Bay Area",
       "countryCode": "US",
       "region": "CA"
     },
     "profiles": [
       {
-        "network": "BlueSky",
-        "username": "lindseyb",
-        "url": "https://bsky.app/profile/lindseyb.bsky.social"
-      },
-      {
         "network": "GitHub",
         "username": "LindseyB",
-        "url": "http://github.com/LindseyB"
+        "url": "https://github.com/LindseyB"
       },
       {
-        "network": "itch.io",
-        "username": "lindseybieda",
-        "url": "https://lindseybieda.itch.io/"
+        "network": "LinkedIn",
+        "username": "lindsey-bieda-05ab44314",
+        "url": "https://www.linkedin.com/in/lindsey-bieda-05ab44314"
       }
     ]
   },
+  "highlights": [
+    "Led GitHub Models from team formation to launch, managing a 10-person global team and delivering key previews at GitHub Universe 2024 and Microsoft Build 2025",
+    "Directed GitHub Copilot feature rollouts, including Issue Summarization and PR integration",
+    "Introduced an engineering rotation program to reduce burnout and boost morale, later adopted across multiple teams"
+  ],
   "work": [
     {
       "name": "GitHub",
+      "location": "San Francisco, CA",
       "position": "Staff Engineering Manager",
       "website": "https://github.com",
       "startDate": "2024-01-01",
+      "summary": "Oversee engineering teams across multiple regions to develop and deliver AI-powered developer tools, driving strategic product launches and fostering individual career growth. Lead cross-functional efforts from team formation to public rollouts, aligning technical execution with organizational goals.",
       "highlights": [
-        "Led a team of 7 to deliver flagship GitHub Copilot features for GitHub Universe, including Issue Summarization, Pull Request integration, and more.",
-        "Orchestrated the transition Copilot for PRs through a new organizational structure, ensuring continued team effectiveness and morale.",
-        "Built and managed a new team of 10 engineers across NA and APAC regions for GitHub Models, a distinct product separate from Copilot.",
-        "Successfully led the first public preview launch of GitHub Models at GitHub Universe 2024 and then later public preview of Models now integrated into repositories for Microsoft Build 2025."
+        "Directed end-to-end development of GitHub Copilot capabilities featured at GitHub Universe, including Issue Summarization and Pull Request integration, by coordinating a 7-person team",
+        "Reorganized team during Copilot for PRs rollout, preserving delivery timelines and team engagement throughout the transition",
+        "Built and led a new 10-member engineering team across North America and APAC to develop GitHub Models, a product distinct from Copilot",
+        "Spearheaded the initial public preview of GitHub Models at Universe 2024, followed by its integration into repositories and launch at Microsoft Build 2025",
+        "Managed a team of 9 engineers across three concurrent projects, guiding technical direction and enabling collaboration with product and design stakeholders",
+        "Provided mentorship that led to the promotion of two engineers from SE3 to Senior Engineer by supporting goal-setting, skills development, and performance planning"
       ]
     },
     {
       "name": "GitHub",
+      "location": "San Francisco, CA",
       "position": "Staff Engineer",
       "website": "https://github.com",
       "startDate": "2022-09-01",
       "endDate": "2024-01-01",
+      "summary": "Served as the primary lead for the GitHub Discussions team, ensuring consistent progress, supporting peers, and stepping in as interim manager when needed. Drove internal programs and external partnerships that influenced broader engineering and community practices.",
       "highlights": [
-        "Continued on as the anchor for the discussions team, acting as lead and point of contact for external teams and assuring work was moving forward",
-        "Created the standard for how hackathons were run and operated at GitHub based on the success for running hackathons at our organizational level",
-        "Developed a pilot program for engineering rotations in order to prevent burnout and increase team morale which quickly became an organizational standard",
-        "Worked with the GitHub Sponsors team to ship the GitHub Sposonsors Patreon integatrion which allowed creators an additional route within GitHub Sponsors to receive funding"
+        "Designed and implemented a pilot engineering rotation program to reduce fatigue and improve engagement, adopted across multiple teams after initial success",
+        "Established the blueprint for organizing company-wide hackathons, leveraging lessons from successful departmental events to influence GitHub's broader approach",
+        "Collaborated with the GitHub Sponsors team to launch a Patreon integration, expanding funding options for open-source creators directly through the platform"
       ]
     },
     {
       "name": "GitHub",
+      "location": "San Francisco, CA",
       "position": "Senior Engineer",
       "website": "https://github.com",
-      "startDate": "2021-04-20",
+      "startDate": "2021-04-01",
       "endDate": "2022-09-01",
-      "summary": "GitHub focuses on tools to build software and connect people in the world of open source",
+      "summary": "Led and supported GitHub Discussions through team leadership, platform migration, and technical improvements. Played a key role in enhancing developer experience and internal team operations during a period of organizational transition.",
       "highlights": [
-        "Operated as the manager for the discussions team for 6 months",
-        "Drove splitting the oversized routes file into separate files and to make the codebase more maintainable",
-        "Anchored the team for a year acting as lead and point of contact for external teams and assuring work was moving forward",
-        "Assited in moving GitHub's community to the GitHub Discussions platform"
+        "Acted as interim manager for six months, overseeing team workflows, providing guidance, and ensuring consistent project progress",
+        "Modularized an oversized routes file into smaller components, improving codebase structure and maintenance",
+        "Served as lead point of contact for external collaborators, driving alignment and keeping workstreams on track",
+        "Assisted in transitioning GitHub's broader community to the Discussions platform, helping scale engagement and adoption"
       ]
     },
     {
       "name": "Stitch Fix",
+      "location": "San Francisco, CA",
       "position": "Lead Engineer",
       "website": "https://stitchfix.com",
-      "startDate": "2020-03-09",
-      "endDate": "2021-04-02",
-      "summary": "Stitch Fix focuses on providing a personal style service to a variety of customers",
+      "startDate": "2020-03-01",
+      "endDate": "2021-04-01",
+      "summary": "Contributed to building personalized shopping experiences at Stitch Fix by developing client-facing features and enhancing the direct purchase platform. Focused on delivering scalable solutions that supported influencer collaborations and dynamic e-commerce flows.",
       "highlights": [
-        "Worked on a collaboration shopping experience with an influencer",
-        "Worked on a dynamic shopping experience for clients",
-        "Expanded the direct purchase platform"
+        "Developed a collaborative shopping feature in partnership with an influencer, enabling shared client engagement",
+        "Built dynamic shopping experiences tailored to individual client preferences, improving user interaction and satisfaction",
+        "Enhanced the direct purchase platform to support broader product discovery and increase conversion opportunities"
       ]
     },
     {
       "name": "GitHub",
+      "location": "San Francisco, CA",
       "position": "Senior Application Engineer",
       "website": "https://github.com",
-      "startDate": "2016-12-05",
-      "endDate": "2020-02-14",
-      "summary": "GitHub focuses on tools to build software and connect people in the world of open source",
+      "startDate": "2016-12-01",
+      "endDate": "2020-02-01",
+      "summary": "Focused on improving platform safety and transparency as part of the Community & Safety team at GitHub. Collaborated cross-functionally to identify and mitigate abuse risks while enhancing user trust through visible change tracking.",
       "highlights": [
-        "Worked with the Community & Safety team to close abuse vectors in our existing codebase to make our users safer",
-        "Added edit history to PRs, Issues, and comments so users could see what changed, when, and by whom",
-        "Worked with other teams to determine what abuse vectors would be in their new features and how to best close them"
+        "Investigated and closed security and abuse vulnerabilities in legacy systems to improve user safety across the platform",
+        "Implemented edit history for Pull Requests, Issues, and comments, allowing users to track content changes and accountability",
+        "Partnered with product and engineering teams to proactively assess and mitigate potential abuse risks in upcoming features"
       ]
     },
     {
       "name": "Articulate Global",
+      "location": "New York, NY",
       "position": "Software Engineer",
       "website": "https://articulate.com",
       "startDate": "2013-07-01",
       "endDate": "2016-11-01",
-      "summary": "Articulate focuses on the world of e-learning with a variety of products to help support e-learning environments",
+      "summary": "Contributed to the development of e-learning tools and infrastructure at Articulate, with a focus on community engagement and seamless user access. Played a key role in scaling platform capabilities to support a growing global user base.",
       "highlights": [
-        "Built and launched the largest community website for e-learning professionals",
-        "Designed and integrated single sign on for all Articulate products"
+        "Built and launched the company's largest online community for e-learning professionals, fostering knowledge sharing and engagement",
+        "Designed and implemented unified SSO system across all Articulate products to simplify and secure user access"
       ]
     },
     {
       "name": "Branding Brand",
-      "position": "Software Engineer R&D",
-      "website": "http://www.brandingbrand.com/",
+      "position": "Software Engineer, R&D",
       "startDate": "2012-06-01",
       "endDate": "2013-04-01",
-      "summary": "Branding Brand is a company that focuses on facilitating mobile e-commerce for it's business partners",
       "highlights": [
-        "Built a third party shopping API so purchases could easily happen through partner websites",
-        "Developed tools to assist in \"transcoding\" partner websites for mobile consumption"
+        "Built third-party shopping APIs and mobile transcoding tools"
       ]
     },
     {
       "name": "Deeplocal",
       "position": "Software Engineer",
-      "website": "http://www.deeplocal.com/",
       "startDate": "2010-01-01",
       "endDate": "2010-08-01",
-      "summary": "Deeplocal is a technology company that builds innovative tech for advertising",
       "highlights": [
-        "Wrote a script to automatically update public transit data",
-        "Completed and tweaked an iPhone game for self parking cars",
-        "Released a motherhood community website"
+        "Developed innovative tech for advertising and public transit applications"
       ]
     },
     {
       "name": "Technology Leadership Initiative",
       "position": "Instructor",
-      "website": "http://tli.cs.pitt.edu/",
       "startDate": "2009-06-01",
       "endDate": "2009-08-01",
-      "summary": "TLI is a group that focuses on bringing computer science education to students that do not have access to programming classes in school",
       "highlights": [
-        "Wrote lesson plans for JavaScript, Robotics, and Computational Thinking classes",
-        "Co-taught classes for 13-15 year old students"
+        "Taught programming to underserved students"
       ]
     }
   ],
   "volunteer": [
     {
       "organization": "Girl Develop It",
-      "position": "Organizer and Teacher",
+      "position": "Organizer & Teacher",
       "website": "https://www.girldevelopit.com/",
       "startDate": "2012-01-01",
       "endDate": "2013-01-01",
@@ -166,56 +167,70 @@
       "area": "Computer Science",
       "studyType": "Bachelor",
       "startDate": "2005-08-01",
-      "endDate": "2008-12-01",
-      "gpa": "",
-      "courses": []
+      "endDate": "2008-12-01"
     },
     {
       "institution": "University of Pittsburgh",
       "area": "Computer Science",
       "studyType": "Masters (incomplete)",
       "startDate": "2009-08-01",
-      "endDate": "2012-04-01",
-      "gpa": "",
-      "courses": []
+      "endDate": "2012-04-01"
     }
   ],
-  "awards": [],
   "publications": [
     {
       "name": "Artful Games",
       "publisher": "The Recompiler",
       "releaseDate": "2016-03-01",
-      "website": "https://recompilermag.com",
-      "summary": "Examining a different way to think about video games from the perspective of my own projects"
+      "website": "https://recompilermag.com/issues/issue-3/artful-games/",
+      "summary": "Writing Games as Art"
     },
     {
-      "name": "206: With Rachel White and Lindsey Bieda",
+      "name": "Shop Talk Show #206",
       "publisher": "Shop Talk Show",
       "releaseDate": "2016-03-07",
       "website": "https://shoptalkshow.com/206-with-rachel-white-and-lindsey-bieda/",
-      "summary": "If you've ever wondered about how to get into game development, this episode will get you excited about trying to code your first game."
+      "summary": "Getting Into Game Development (with Rachel White)"
     },
     {
-      "name": "Hardware, Hula Hoops, and Flow",
-      "publisher": "Open Source Bridge",
+      "name": "OpenSource.com Interview",
+      "publisher": "OpenSource.com",
       "releaseDate": "2016-06-15",
-      "website": "https://opensource.com/life/16/6/interview-lindsey-bieda"
+      "website": "https://opensource.com/life/16/6/interview-lindsey-bieda",
+      "summary": "On Flow and Working with Hardware"
     },
     {
-      "name": "Anti-Oppression 101 with Steve Klabnik",
+      "name": "Conference Talk",
       "publisher": "Steel City Ruby & Madison Ruby Conf",
       "releaseDate": "2012-08-03",
-      "website": "https://www.youtube.com/watch?v=3HlKt63GitE"
+      "website": "https://www.youtube.com/watch?v=3HlKt63GitE",
+      "summary": "Anti-oppression 101"
     }
   ],
   "skills": [
     {
+      "name": "Core Competencies",
+      "keywords": [
+        "Technical Strategy & Roadmap Execution",
+        "Full-Stack Software Development", 
+        "Backend Architecture & System Design",
+        "AI & LLM Integration",
+        "Product Development",
+        "Engineering Team Leadership",
+        "Mentorship & Career Development",
+        "Cross-Functional Collaboration",
+        "Agile & Iterative Development",
+        "Frontend & Backend Frameworks",
+        "Codebase Maintainability & Refactoring",
+        "Developer Experience & Platform Safety",
+        "Remote Environment"
+      ]
+    },
+    {
       "name": "Web Development",
-      "level": "Master",
       "keywords": [
         "HTML",
-        "CSS",
+        "CSS", 
         "JavaScript",
         "Ruby on Rails",
         "GraphQL",
@@ -224,7 +239,6 @@
     },
     {
       "name": "Programming",
-      "level": "Master",
       "keywords": [
         "Lua",
         "Python",
@@ -235,8 +249,7 @@
       ]
     },
     {
-      "name": "Databases",
-      "level": "Master",
+      "name": "Databases", 
       "keywords": [
         "SQL",
         "PostgreSQL",
@@ -248,16 +261,15 @@
   "languages": [
     {
       "language": "English",
-      "fluency": "Native speaker"
-    }
-  ],
-  "references": [
+      "fluency": "Fluent"
+    },
     {
-      "name": "",
-      "reference": "Available upon request"
+      "language": "German", 
+      "fluency": "Basic"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Basic"
     }
-  ],
-  "meta": {
-    "theme": "flat"
-  }
+  ]
 }
