@@ -398,6 +398,18 @@ body {
 	transform: scale(0.95);
 }
 
+/* Link Styles */
+a {
+	color: #3b82f6;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+a:hover {
+	color: #1d4ed8;
+	text-decoration: underline;
+}
+
 /* Dark Mode Styles */
 .dark-mode {
 	--primary-color: #e2e8f0;
@@ -436,6 +448,14 @@ body {
 
 .dark-mode .contact-item:hover {
 	color: #cbd5e1;
+}
+
+.dark-mode a {
+	color: #60a5fa;
+}
+
+.dark-mode a:hover {
+	color: #93c5fd;
 }
 
 /* Smooth transitions for theme changes */
