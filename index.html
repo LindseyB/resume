@@ -319,6 +319,37 @@
 			</aside>
 		</div>
 	</div>
+
+	<!-- Dark Mode Toggle -->
+	<button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+		<span class="toggle-icon">🌙</span>
+	</button>
+
+	<script>
+		const darkModeToggle = document.getElementById('darkModeToggle');
+		const body = document.body;
+		const toggleIcon = darkModeToggle.querySelector('.toggle-icon');
+
+		// Check for saved theme preference or default to light mode
+		const currentTheme = localStorage.getItem('theme') || 'light';
+		
+		if (currentTheme === 'dark') {
+			body.classList.add('dark-mode');
+			toggleIcon.textContent = '☀️';
+		}
+
+		darkModeToggle.addEventListener('click', () => {
+			body.classList.toggle('dark-mode');
+			
+			if (body.classList.contains('dark-mode')) {
+				toggleIcon.textContent = '☀️';
+				localStorage.setItem('theme', 'dark');
+			} else {
+				toggleIcon.textContent = '🌙';
+				localStorage.setItem('theme', 'light');
+			}
+		});
+	</script>
 </body>
 
 </html>
