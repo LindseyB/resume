@@ -27,17 +27,29 @@
     ]
   },
   "highlights": [
+    "Currently leading the FM Foundations team at LaunchDarkly to build core feature management experience",
     "Led GitHub Models from team formation to launch, managing a 10-person global team and delivering key previews at GitHub Universe 2024 and Microsoft Build 2025",
     "Directed GitHub Copilot feature rollouts, including Issue Summarization and PR integration",
     "Introduced an engineering rotation program to reduce burnout and boost morale, later adopted across multiple teams"
   ],
   "work": [
     {
+      "name": "LaunchDarkly",
+      "location": "Oakland, CA",
+      "position": "Engineering Manager",
+      "website": "https://launchdarkly.com",
+      "startDate": "2025-11-17",
+      "summary": "Lead the FM Foundations team to build and maintain core experience and platform capabilities that enable feature management at scale.",
+      "highlights": [
+      ]
+    },
+    {
       "name": "GitHub",
       "location": "San Francisco, CA",
       "position": "Staff Engineering Manager",
       "website": "https://github.com",
       "startDate": "2024-01-01",
+      "endDate": "2025-11-04",
       "summary": "Oversee engineering teams across multiple regions to develop and deliver AI-powered developer tools, driving strategic product launches and fostering individual career growth. Lead cross-functional efforts from team formation to public rollouts, aligning technical execution with organizational goals.",
       "highlights": [
         "Directed end-to-end development of GitHub Copilot capabilities featured at GitHub Universe, including Issue Summarization and Pull Request integration, by coordinating a 7-person team",
