@@ -33,11 +33,27 @@
   ],
   "work": [
     {
+      "name": "LaunchDarkly",
+      "location": "Oakland, CA",
+      "position": "Senior Engineering Manager",
+      "website": "https://launchdarkly.com",
+      "startDate": "2025-11-01",
+      "summary": "Led a 10-member engineering team focused on product-led growth, developer onboarding, and SDK activation - driving funnel improvements, cross-functional product delivery, and individual career development across a newly formed team.",
+      "highlights": [
+        "Drove a 4x improvement in SDK install conversion rate (4% → 16%), a core activation metric for LaunchDarkly's product-led growth strategy",
+        "Led four concurrent product workstreams — Flag Rollback, Vercel Marketplace integration, Agentic Onboarding, and MCP Marketplace submissions — maintaining delivery momentum across a 10-engineer team",
+        "Established the Foundation team from a three-team merger (Growth, FM Next, FM Foundations), defining mission, rituals, Jira board structure, and ownership scope within the first 90 days",
+        "Drove career development across three engineers simultaneously — including a successful promotion nomination backed by seven external stakeholders — through structured goal-setting, skills coaching, and performance documentation",
+        "Contributed directly as an IC alongside management responsibilities, personally shipping the 400KB flag size enforcement API, the Block In-Use Variants feature, and a CLI signup command"
+      ]
+    },
+    {
       "name": "GitHub",
       "location": "San Francisco, CA",
       "position": "Staff Engineering Manager",
       "website": "https://github.com",
       "startDate": "2024-01-01",
+      "endDate": "2025-11-01",
       "summary": "Oversee engineering teams across multiple regions to develop and deliver AI-powered developer tools, driving strategic product launches and fostering individual career growth. Lead cross-functional efforts from team formation to public rollouts, aligning technical execution with organizational goals.",
       "highlights": [
         "Directed end-to-end development of GitHub Copilot capabilities featured at GitHub Universe, including Issue Summarization and Pull Request integration, by coordinating a 7-person team",
@@ -204,7 +220,7 @@
       "publisher": "Steel City Ruby & Madison Ruby Conf",
       "releaseDate": "2012-08-03",
       "website": "https://www.youtube.com/watch?v=3HlKt63GitE",
-      "summary": "Anti-oppression 101"
+      "summary": "Hacking Hardware for Fun"
     }
   ],
   "skills": [
