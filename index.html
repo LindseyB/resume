@@ -626,11 +626,13 @@
 				const artText = await getAsciiArt();
 				const mothMarker = artText.indexOf('Moth');
 				if (mothMarker !== -1) {
-					const afterMothLabel = artText.indexOf('\n', mothMarker) + 1;
-					let mStart = afterMothLabel;
-					while (mStart < artText.length && (artText[mStart] === '\n' || artText[mStart] === '\r')) mStart++;
-					const mEnd = artText.indexOf('\nLindseyTerm', mStart);
-					mothArt = mEnd !== -1 ? artText.substring(mStart, mEnd).trimEnd() : '';
+					const mothLineEnd = artText.indexOf('\n', mothMarker);
+					if (mothLineEnd !== -1) {
+						let mStart = mothLineEnd + 1;
+						while (mStart < artText.length && (artText[mStart] === '\n' || artText[mStart] === '\r')) mStart++;
+						const mEnd = artText.indexOf('\nLindseyTerm', mStart);
+						mothArt = mEnd !== -1 ? artText.substring(mStart, mEnd).trimEnd() : '';
+					}
 				}
 			} catch (e) {
 				// moth is decorative; silently skip on error
