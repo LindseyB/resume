@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -10,7 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
 
-	<title>Lindsey Bieda - Engineering Manager</title>
+	<title>Lindsey Bieda - Staff Engineering Manager</title>
 	<link rel="stylesheet" href="resume.css">
 </head>
 
@@ -20,7 +20,7 @@
 		<div class="container">
 			<div class="header-content">
 				<h1>Lindsey Bieda</h1>
-				<div class="title">Engineering Manager</div>
+				<div class="title">Staff Engineering Manager</div>
 				<div class="tagline">Building scalable, mission-driven technology solutions that empower teams and deliver real-world impact</div>
 				<div class="contact-info">
 					<a href="mailto:lbieda@gmail.com" class="contact-item">
@@ -63,7 +63,7 @@
 					<div class="key-highlights">
 					<h3>Key Highlights</h3>
 					<ul>
-						<li>Currently leading the FM Foundations team at LaunchDarkly to build core feature management experience</li>
+						<li>Currently leading the Foundation team at LaunchDarkly to build core feature management experience</li>
 						<li>Led GitHub Models from team formation to launch, managing a 10-person global team and delivering key previews at GitHub Universe 2024 and Microsoft Build 2025</li>
 						<li>Directed GitHub Copilot feature rollouts, including Issue Summarization and PR integration</li>
 						<li>Introduced an engineering rotation program to reduce burnout and boost morale, later adopted across multiple teams</li>
@@ -347,10 +347,22 @@
 		<span class="toggle-icon">🌙</span>
 	</button>
 
+	<!-- Scanlines overlay (active in terminal mode) -->
+	<div id="scanlines-overlay"></div>
+
+	<!-- Terminal Mode Toggle (Hidden/Transparent) -->
+	<button class="terminal-mode-toggle" id="terminalToggle" aria-label="Toggle terminal mode">
+		<span class="toggle-icon">💻</span>
+	</button>
+
 	<script>
+		// Variable declarations
 		const darkModeToggle = document.getElementById('darkModeToggle');
+		const terminalToggle = document.getElementById('terminalToggle');
 		const body = document.body;
 		const toggleIcon = darkModeToggle.querySelector('.toggle-icon');
+		let isTerminalMode = false;
+		let isAnimating = false;
 
 		// Check for saved theme preference or default to light mode
 		const currentTheme = localStorage.getItem('theme') || 'light';
@@ -360,7 +372,13 @@
 			toggleIcon.textContent = '☀️';
 		}
 
+		// Dark Mode Toggle
 		darkModeToggle.addEventListener('click', () => {
+			if (isTerminalMode) {
+				exitTerminalMode();
+				return;
+			}
+
 			body.classList.toggle('dark-mode');
 			
 			if (body.classList.contains('dark-mode')) {
@@ -371,6 +389,289 @@
 				localStorage.setItem('theme', 'light');
 			}
 		});
+
+		// Terminal Mode Functionality
+		terminalToggle.addEventListener('click', () => {
+			if (isAnimating) return;
+
+			if (!isTerminalMode) {
+				isTerminalMode = true;
+				enterTerminalMode();
+			} else {
+				exitTerminalMode();
+			}
+		});
+
+		// Module-level terminal text helpers
+		function appendTerminalText(text) {
+			const output = document.getElementById('terminalOutput');
+			const lastChild = output.lastChild;
+			if (lastChild && lastChild.nodeType === 3) {
+				lastChild.textContent += text;
+			} else {
+				output.appendChild(document.createTextNode(text));
+			}
+		}
+
+		function typeTerminalText(text, delay) {
+			return new Promise(resolve => {
+				let i = 0;
+				function next() {
+					if (i < text.length) {
+						appendTerminalText(text[i++]);
+						setTimeout(next, delay);
+					} else {
+						resolve();
+					}
+				}
+				next();
+			});
+		}
+
+		function pause(ms) {
+			return new Promise(resolve => setTimeout(resolve, ms));
+		}
+
+		let asciiArtCache = null;
+		async function getAsciiArt() {
+			if (!asciiArtCache) {
+				asciiArtCache = await fetch('ascii-art.txt').then(r => r.text());
+			}
+			return asciiArtCache;
+		}
+
+		function updateAsciiScroll(container, scrollBarElement) {
+			const contentHeight = container.scrollHeight - container.clientHeight;
+			const scrollPercentage = contentHeight > 0 ? container.scrollTop / contentHeight : 0;
+
+			// Calculate bar length to fill the container height
+			const fontSize = parseFloat(getComputedStyle(scrollBarElement).fontSize);
+			const lineHeightPx = fontSize * 1.2;
+			const barLength = Math.max(3, Math.floor(container.clientHeight / lineHeightPx) - 2);
+
+			const filledLength = Math.round(scrollPercentage * barLength);
+			const emptyLength = barLength - filledLength;
+
+			const lines = ['▲'];
+			for (let i = 0; i < filledLength; i++) lines.push('█');
+			for (let i = 0; i < emptyLength; i++) lines.push('░');
+			lines.push('▼');
+
+			scrollBarElement.textContent = lines.join('\n');
+		}
+
+		async function runLoginFlow() {
+			// Fetch banner from ascii-art.txt
+			let banner = '';
+			try {
+				const artText = await getAsciiArt();
+				const marker = artText.indexOf('LindseyTerm');
+				const afterMarker = artText.indexOf('\n', marker) + 1;
+				let start = afterMarker;
+				while (start < artText.length && (artText[start] === '\n' || artText[start] === '\r')) start++;
+				let end = artText.indexOf('\n\n', start);
+				if (end === -1) end = artText.length;
+				banner = artText.substring(start, end).trimEnd();
+			} catch (e) {
+				banner = 'LindseyTerm';
+			}
+
+			// Type banner slowly (1/4 of resume speed = 32ms per char)
+			await typeTerminalText(banner + '\n\n', 32);
+
+			// Last login line
+			const now = new Date();
+			const loginTime = now.toLocaleString('en-US', {
+				weekday: 'short', month: 'short', day: 'numeric',
+				hour: '2-digit', minute: '2-digit', second: '2-digit', year: 'numeric'
+			});
+			appendTerminalText(`Last login: ${loginTime}\n\n`);
+			await pause(600);
+
+			// login prompt
+			appendTerminalText('login: ');
+			await typeTerminalText('foxglove', 110);
+			appendTerminalText('\n');
+			await pause(400);
+
+			// password prompt
+			appendTerminalText('password: ');
+			await typeTerminalText('*********', 140);
+			appendTerminalText('\n');
+			await pause(900);
+
+			// Clear and show the cat command
+			const output = document.getElementById('terminalOutput');
+			output.innerHTML = '';
+			appendTerminalText('$ cat RESUME.md\n\n');
+			await pause(300);
+		}
+
+		async function enterTerminalMode() {
+			isAnimating = true;
+			const mainContent = document.querySelector('.main-content');
+
+			// Create wrapper with flex layout
+			const wrapper = document.createElement('div');
+			wrapper.className = 'terminal-wrapper';
+
+			// Create terminal container
+			const terminalContainer = document.createElement('div');
+			terminalContainer.className = 'terminal-container';
+			terminalContainer.id = 'terminalContainer';
+			terminalContainer.innerHTML = '<div class="terminal-output" id="terminalOutput"></div><span class="terminal-cursor"></span>';
+
+			// Create ASCII scrollbar as sibling inside wrapper
+			const scrollBarElement = document.createElement('div');
+			scrollBarElement.className = 'ascii-scrollbar';
+			scrollBarElement.id = 'asciiScrollbar';
+
+			wrapper.appendChild(terminalContainer);
+			wrapper.appendChild(scrollBarElement);
+
+			mainContent.innerHTML = '';
+			mainContent.appendChild(wrapper);
+
+			body.classList.add('terminal-mode');
+
+			// Initialize scrollbar and set up scroll event listener
+			updateAsciiScroll(terminalContainer, scrollBarElement);
+			terminalContainer.addEventListener('scroll', () => {
+				updateAsciiScroll(terminalContainer, scrollBarElement);
+			});
+
+			try {
+				// Generate terminal text from resume
+				await runLoginFlow();
+				const terminalText = await generateTerminalText();
+				animateTerminalOutput(terminalText);
+			} catch (e) {
+				console.error('Terminal mode error:', e);
+				isAnimating = false;
+				isTerminalMode = false;
+				location.reload();
+			}
+		}
+
+		function exitTerminalMode() {
+			body.classList.remove('terminal-mode');
+			location.reload();
+		}
+
+		async function generateTerminalText() {
+			const r = await fetch('resume.json');
+			if (!r.ok) throw new Error(`Failed to load resume.json: ${r.status}`);
+			const d = await r.json();
+
+			const basics = d.basics;
+			const location = `${basics.location.city}, ${basics.location.region}`;
+			const github = basics.profiles.find(p => p.network === 'GitHub')?.url || '';
+			const linkedin = basics.profiles.find(p => p.network === 'LinkedIn')?.url || '';
+
+			function formatDate(str) {
+				if (!str) return 'Present';
+				const [y, m] = str.split('-');
+				return new Date(y, m - 1).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+			}
+
+			let output = `# ${basics.name}\n`;
+			output += `## ${basics.label}\n\n`;
+			output += `${location} | <a href="mailto:${basics.email}">${basics.email}</a> | ${basics.phone}\n`;
+			output += `<a href="${basics.website}" target="_blank" rel="noopener">${basics.website}</a>`;
+			if (github) output += ` | <a href="${github}" target="_blank" rel="noopener">${github}</a>`;
+			if (linkedin) output += ` | <a href="${linkedin}" target="_blank" rel="noopener">${linkedin}</a>`;
+			output += `\n\n---\n\n`;
+
+			output += `## About\n\n${basics.summary}\n\n`;
+
+			if (d.highlights?.length) {
+				output += `## Highlights\n\n`;
+				d.highlights.forEach(h => { output += `• ${h}\n\n`; });
+			}
+
+			output += `## Professional Experience\n\n`;
+			d.work.forEach(job => {
+				const start = formatDate(job.startDate);
+				const end = formatDate(job.endDate);
+				output += `### ${job.position} | ${job.name}\n`;
+				if (job.location) output += `**${job.location}** | `;
+				output += `${start} - ${end}\n\n`;
+				if (job.summary) output += `${job.summary}\n\n`;
+			});
+
+			const skillsToShow = ['Web Development', 'Programming', 'Databases'];
+			const skillMap = {};
+			d.skills.forEach(s => { skillMap[s.name] = s.keywords; });
+			output += `## Technical Skills\n\n`;
+			skillsToShow.forEach(name => {
+				if (skillMap[name]) output += `**${name}:** ${skillMap[name].join(', ')}\n\n`;
+			});
+
+			output += `## Education\n\n`;
+			d.education.forEach(edu => {
+				output += `• ${edu.studyType} in ${edu.area} - ${edu.institution}\n\n`;
+			});
+
+			// Fetch moth art from ascii-art.txt
+			let mothArt = '';
+			try {
+				const artText = await getAsciiArt();
+				const mothMarker = artText.indexOf('Moth');
+				const afterMothLabel = artText.indexOf('\n', mothMarker) + 1;
+				let mStart = afterMothLabel;
+				while (mStart < artText.length && (artText[mStart] === '\n' || artText[mStart] === '\r')) mStart++;
+				const mEnd = artText.indexOf('\nLindseyTerm', mStart);
+				mothArt = mEnd !== -1 ? artText.substring(mStart, mEnd).trimEnd() : '';
+			} catch (e) {
+				// moth is decorative; silently skip on error
+			}
+
+			output += `\n---\n\n${mothArt}\n`;
+
+			return output;
+		}
+
+		function animateTerminalOutput(text) {
+			const output = document.getElementById('terminalOutput');
+			let index = 0;
+			const cursorElement = document.querySelector('.terminal-cursor');
+			
+			// Clear any existing content
+			output.innerHTML = '';
+			
+			function typeChar() {
+				if (index < text.length) {
+					const char = text[index];
+					
+					// Check if we're starting an anchor tag - insert the whole <a>...</a> atomically
+					if (char === '<' && text.substring(index, index + 2) === '<a') {
+						const closeTag = text.indexOf('</a>', index);
+						if (closeTag !== -1) {
+							const fullAnchor = text.substring(index, closeTag + 4);
+							const span = document.createElement('span');
+							span.innerHTML = fullAnchor;
+							output.appendChild(span.firstChild);
+							index = closeTag + 4;
+							const delay = Math.random() < 0.1 ? 13 : 8;
+							setTimeout(typeChar, delay);
+							return;
+						}
+					}
+					
+					// For text content, append to the last text node
+					appendTerminalText(char);
+					index++;
+					const delay = Math.random() < 0.1 ? 13 : 8;
+					setTimeout(typeChar, delay);
+				} else {
+					isAnimating = false;
+					cursorElement.style.display = 'inline-block';
+				}
+			}
+			
+			cursorElement.style.display = 'inline-block';
+			typeChar();
+		}
 	</script>
 </body>
 

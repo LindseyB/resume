@@ -481,3 +481,356 @@ body {
 		font-size: 1.2rem;
 	}
 }
+
+/* Terminal Mode Toggle Button */
+.terminal-mode-toggle {
+	position: fixed;
+	bottom: 2rem;
+	right: 4.5rem;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: none;
+	background: transparent;
+	color: transparent;
+	font-size: 1.5rem;
+	cursor: pointer;
+	box-shadow: none;
+	transition: all 0.3s ease;
+	z-index: 999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.terminal-mode-toggle:hover {
+	opacity: 0;
+	background: transparent;
+	color: transparent;
+	transform: scale(1);
+}
+
+.terminal-mode-toggle:active {
+	transform: scale(1);
+}
+
+/* Hidden activation zone - hover over dark mode button area */
+.dark-mode-toggle:hover ~ .terminal-mode-toggle,
+.terminal-mode-toggle:hover {
+	opacity: 1;
+	pointer-events: auto;
+	background: rgba(79, 70, 229, 0.3);
+	color: rgba(79, 70, 229, 0.6);
+}
+
+.dark-mode-toggle:hover ~ .terminal-mode-toggle:hover,
+.terminal-mode-toggle:hover {
+	opacity: 1;
+	background: rgba(79, 70, 229, 0.5);
+	color: rgba(79, 70, 229, 0.9);
+	transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+	.terminal-mode-toggle {
+		bottom: 1rem;
+		right: 5rem;
+		width: 50px;
+		height: 50px;
+		font-size: 1.2rem;
+	}
+}
+
+/* Terminal Mode Styles */
+.terminal-mode {
+	--primary-color: #00ff00;
+	--secondary-color: #00dd00;
+	--accent-color: #00ff00;
+	--text-primary: #00ff00;
+	--text-secondary: #00dd00;
+	--background: #000000;
+	--surface: #000000;
+	--border: #00ff00;
+	font-family: 'Consolas', 'JetBrains Mono', 'Courier New', monospace !important;
+	background-color: #000000 !important;
+	color: #00ff00 !important;
+}
+
+.terminal-mode .container {
+	background-color: #000000 !important;
+}
+
+.terminal-mode .header {
+	display: none;
+}
+
+.terminal-mode .sidebar {
+	display: none;
+}
+
+.terminal-mode .main-content {
+	grid-template-columns: 1fr;
+	gap: 0;
+	padding: 2rem;
+	max-width: 100%;
+	margin: 0;
+	background-color: #000000 !important;
+}
+
+.terminal-mode .dark-mode-toggle {
+	opacity: 0.5;
+	background: rgba(0, 255, 0, 0.2);
+	color: rgba(0, 255, 0, 0.4);
+	box-shadow: none;
+}
+
+.terminal-mode .dark-mode-toggle:hover {
+	opacity: 0.7;
+	background: rgba(0, 255, 0, 0.3);
+	color: rgba(0, 255, 0, 0.6);
+}
+
+.terminal-mode .terminal-mode-toggle {
+	opacity: 1;
+	background: rgba(0, 255, 0, 0.4);
+	color: #00ff00;
+	box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+	filter: sepia(100%) saturate(200%) hue-rotate(400deg) brightness(82%) contrast(94%);
+}
+
+.terminal-mode .terminal-mode-toggle:hover {
+	opacity: 1;
+	background: rgba(0, 255, 0, 0.6);
+	box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+	filter: sepia(100%) saturate(200%) hue-rotate(400deg) brightness(82%) contrast(94%);
+}
+
+.terminal-mode ::selection {
+	background-color: #00ff00;
+	color: #000000;
+}
+
+/* Terminal Container */
+.terminal-container {
+	position: relative;
+	font-family: 'Consolas', 'JetBrains Mono', 'Courier New', monospace;
+	font-size: 0.8rem;
+	line-height: 1.2;
+	padding: 1rem;
+	border: 2px solid #00ff00;
+	border-radius: 4px;
+	box-shadow: 0 0 20px rgba(0, 255, 0, 0.3), inset 0 0 20px rgba(0, 255, 0, 0.05);
+	height: 100%;
+	overflow-y: auto;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	animation: glow 3s ease-in-out infinite, whiteLineFlicker 8s ease-in-out infinite;
+}
+
+/* Terminal Output */
+#terminalOutput {
+	font-family: 'Consolas', 'JetBrains Mono', 'Courier New', monospace;
+	font-size: 0.8rem;
+	color: #00ff00;
+	background-color: #000000;
+	margin: 0;
+	padding: 0;
+	display: inline;
+	word-break: break-word;
+	white-space: pre-wrap;
+	line-height: 1.2;
+	position: relative;
+	z-index: 5;
+}
+
+#terminalOutput a {
+	color: #00ff00;
+	text-decoration: underline;
+	cursor: pointer;
+	transition: color 0.2s ease;
+}
+
+#terminalOutput a:hover {
+	color: #00dd00;
+	text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+/* Terminal Cursor Animation - Rectangle Block */
+.terminal-cursor {
+	display: inline-block;
+	width: 12px;
+	height: 1.2em;
+	background-color: #00ff00;
+	margin-left: 2px;
+	margin-right: 2px;
+	animation: blink 1s infinite;
+	vertical-align: baseline;
+	border: 1px solid #00ff00;
+}
+
+@keyframes blink {
+	0%, 49% {
+		background-color: #00ff00;
+		box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+	}
+	50%, 100% {
+		background-color: transparent;
+		box-shadow: 0 0 5px rgba(0, 255, 0, 0.4);
+	}
+}
+
+/* Glow effect for terminal mode */
+@keyframes glow {
+	0%, 100% {
+		text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+	}
+	50% {
+		text-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+	}
+}
+
+@keyframes whiteLineFlicker {
+	0%, 100% {
+		box-shadow: inset 0 0 0 0 transparent;
+	}
+	3% {
+		box-shadow: inset 0 45% 0 2px rgba(255, 255, 255, 0.8);
+	}
+	6% {
+		box-shadow: inset 0 0 0 0 transparent;
+	}
+	12% {
+		box-shadow: inset 0 25% 0 1px rgba(255, 255, 255, 0.6);
+	}
+	14% {
+		box-shadow: inset 0 0 0 0 transparent;
+	}
+}
+
+/* CRT Scanlines overlay (technique from codepen.io/meduzen/pen/zxbwRV) */
+#scanlines-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	pointer-events: none;
+	z-index: 2147483647;
+	overflow: hidden;
+	display: none;
+}
+
+.terminal-mode #scanlines-overlay {
+	display: block;
+}
+
+/* Moving green phosphor beam */
+#scanlines-overlay::before {
+	display: block;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	top: 0;
+	background: rgba(0, 255, 0, 0.5);
+	box-shadow: 0 0 8px rgba(0, 255, 0, 0.9), 0 0 20px rgba(0, 255, 0, 0.4);
+	opacity: 0.75;
+	animation: scanline 6s linear infinite;
+	z-index: 2;
+}
+
+/* Repeating dark scanlines */
+#scanlines-overlay::after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(
+		to bottom,
+		transparent 50%,
+		rgba(0, 0, 0, 0.4) 51%
+	);
+	background-size: 100% 4px;
+	animation: scanlines 1s steps(60) infinite;
+	z-index: 2147483648;
+}
+
+@keyframes scanline {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		transform: translate3d(0, 100vh, 0);
+	}
+}
+
+@keyframes scanlines {
+	0% {
+		background-position: 0 50%;
+	}
+}
+
+/* Terminal Wrapper (flex layout for side scrollbar) */
+.terminal-wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	height: calc(100vh - 2rem);
+	align-items: stretch;
+}
+
+.terminal-wrapper .terminal-container {
+	flex: 1;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.terminal-wrapper .terminal-container::-webkit-scrollbar {
+	display: none;
+}
+
+/* ASCII Scrollbar - side panel */
+.ascii-scrollbar {
+	font-family: 'Consolas', 'JetBrains Mono', 'Courier New', monospace;
+	color: #00ff00;
+	font-size: 0.85rem;
+	white-space: pre;
+	line-height: 1.2;
+	text-align: center;
+	pointer-events: none;
+	text-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+	padding: 0 0.25rem;
+	align-self: stretch;
+	overflow: hidden;
+}
+
+@media print {
+	#scanlines-overlay,
+	.ascii-scrollbar,
+	.terminal-mode-toggle,
+	.dark-mode-toggle {
+		display: none !important;
+	}
+
+	.terminal-wrapper {
+		height: auto;
+	}
+
+	.terminal-container {
+		height: auto;
+		overflow: visible;
+		border: none;
+		box-shadow: none;
+	}
+
+	#terminalOutput a::after {
+		content: ' (' attr(href) ')';
+		font-size: 0.8em;
+		opacity: 0.75;
+	}
+}
