@@ -351,7 +351,7 @@
 	<div id="scanlines-overlay"></div>
 
 	<!-- Terminal Mode Toggle (Hidden/Transparent) -->
-	<button class="terminal-mode-toggle" id="terminalToggle" aria-label="Toggle terminal mode">
+	<button class="terminal-mode-toggle" id="terminalToggle" aria-hidden="true" tabindex="-1">
 		<span class="toggle-icon">💻</span>
 	</button>
 
@@ -648,9 +648,16 @@
 						const closeTag = text.indexOf('</a>', index);
 						if (closeTag !== -1) {
 							const fullAnchor = text.substring(index, closeTag + 4);
-							const span = document.createElement('span');
-							span.innerHTML = fullAnchor;
-							output.appendChild(span.firstChild);
+						const a = document.createElement('a');
+						const hrefMatch = fullAnchor.match(/href="([^"]*)"/); 
+						const targetMatch = fullAnchor.match(/target="([^"]*)"/); 
+						const relMatch = fullAnchor.match(/rel="([^"]*)"/); 
+						const textMatch = fullAnchor.match(/>([^<]*)<\/a>/);
+						if (hrefMatch) a.href = hrefMatch[1];
+						if (targetMatch) a.target = targetMatch[1];
+						if (relMatch) a.rel = relMatch[1];
+						a.textContent = textMatch ? textMatch[1] : '';
+						output.appendChild(a);
 							index = closeTag + 4;
 							const delay = Math.random() < 0.1 ? 13 : 8;
 							setTimeout(typeChar, delay);

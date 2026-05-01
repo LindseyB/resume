@@ -817,6 +817,13 @@ body {
 		display: none !important;
 	}
 
+	.terminal-mode,
+	.terminal-mode .terminal-container,
+	.terminal-mode #terminalOutput {
+		color: #000000 !important;
+		background-color: #ffffff !important;
+	}
+
 	.terminal-wrapper {
 		height: auto;
 	}
