@@ -466,12 +466,20 @@
 			try {
 				const artText = await getAsciiArt();
 				const marker = artText.indexOf('LindseyTerm');
-				const afterMarker = artText.indexOf('\n', marker) + 1;
-				let start = afterMarker;
-				while (start < artText.length && (artText[start] === '\n' || artText[start] === '\r')) start++;
-				let end = artText.indexOf('\n\n', start);
-				if (end === -1) end = artText.length;
-				banner = artText.substring(start, end).trimEnd();
+				if (marker !== -1) {
+					const markerLineEnd = artText.indexOf('\n', marker);
+					if (markerLineEnd !== -1) {
+						let start = markerLineEnd + 1;
+						while (start < artText.length && (artText[start] === '\n' || artText[start] === '\r')) start++;
+						let end = artText.indexOf('\n\n', start);
+						if (end === -1) end = artText.length;
+						banner = artText.substring(start, end).trimEnd();
+					} else {
+						banner = 'LindseyTerm';
+					}
+				} else {
+					banner = 'LindseyTerm';
+				}
 			} catch (e) {
 				banner = 'LindseyTerm';
 			}
@@ -617,11 +625,13 @@
 			try {
 				const artText = await getAsciiArt();
 				const mothMarker = artText.indexOf('Moth');
-				const afterMothLabel = artText.indexOf('\n', mothMarker) + 1;
-				let mStart = afterMothLabel;
-				while (mStart < artText.length && (artText[mStart] === '\n' || artText[mStart] === '\r')) mStart++;
-				const mEnd = artText.indexOf('\nLindseyTerm', mStart);
-				mothArt = mEnd !== -1 ? artText.substring(mStart, mEnd).trimEnd() : '';
+				if (mothMarker !== -1) {
+					const afterMothLabel = artText.indexOf('\n', mothMarker) + 1;
+					let mStart = afterMothLabel;
+					while (mStart < artText.length && (artText[mStart] === '\n' || artText[mStart] === '\r')) mStart++;
+					const mEnd = artText.indexOf('\nLindseyTerm', mStart);
+					mothArt = mEnd !== -1 ? artText.substring(mStart, mEnd).trimEnd() : '';
+				}
 			} catch (e) {
 				// moth is decorative; silently skip on error
 			}
